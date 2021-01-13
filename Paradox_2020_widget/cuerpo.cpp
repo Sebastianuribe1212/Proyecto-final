@@ -8,7 +8,7 @@ cuerpo::cuerpo(int r_, int x, int y)
     r = r_;
     posx = x;
     posy = y;
-    setPos(posx,posy);
+
 }
 
 int cuerpo::getR() const
@@ -20,7 +20,7 @@ void cuerpo::setR(int value)
 {
     r = value;
 }
-
+*/
 int cuerpo::getPosx() const
 {
     return posx;
@@ -66,27 +66,27 @@ void cuerpo::right()
     posx += 0.5*velocidad;
     setPos(posx, posy);
 }
-*/
+
 cuerpo::cuerpo(QObject *parent): QObject(parent)
 {
     timer = new QTimer();
     filas = 0;
     columnas = 0;
+    setPos(posx,posy);
+    pixmap = new QPixmap(":/trump");
 
-    pixmap = new QPixmap(":/donalPNG.png");
-
-    ancho = 80;
+    ancho = 100;
     alto = 100;
 
-    timer->start(300);
+    timer->start(50);
     connect(timer, &QTimer::timeout, this, &cuerpo::Actualizacion);
 
 
 }
 void cuerpo::Actualizacion()
 {
-       columnas += 80;
-            if(columnas >= 960)
+       columnas += 100;
+            if(columnas >= 600)
             {
                 columnas = 0;
             }
@@ -101,6 +101,6 @@ QRectF cuerpo::boundingRect() const
 
 void cuerpo::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
     {
-        painter->drawPixmap(-ancho/2,-alto/2,*pixmap,columnas,0,ancho,alto);
+        painter->drawPixmap(-ancho/2,-alto/2,*pixmap,columnas,300,ancho,alto);
 
     }

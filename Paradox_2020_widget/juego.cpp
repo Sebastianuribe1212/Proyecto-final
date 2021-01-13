@@ -10,9 +10,9 @@ juego :: juego(QWidget * parent)
 
     setFixedSize(800,600);
 
-   // personaje = new cuerpo();
+    personaje = new cuerpo();
 
-    personaje->setPos(0,0);
+    personaje->setPos(400,300);
     personaje->setFlag(QGraphicsItem::ItemIsFocusable);
     personaje->setFocus();
 

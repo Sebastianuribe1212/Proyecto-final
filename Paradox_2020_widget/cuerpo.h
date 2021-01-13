@@ -6,14 +6,15 @@
 #include <QPainter>
 #include <QTimer>
 #include <QPixmap>
-
+#include <QKeyEvent>
 class cuerpo:  public QObject, public QGraphicsItem
 {
     Q_OBJECT
-    /*int r;
+
+private:
     int posx, posy;
     int velocidad = 5;
-*/
+
 public:
     explicit cuerpo(QObject *parent = nullptr);
    // cuerpo(int r_, int x, int y);
