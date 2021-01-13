@@ -1,7 +1,7 @@
 #include "juego.h"
 
 juego :: juego(QWidget * parent)
-{
+{ cuerpo *  personaje = new cuerpo();
     scene = new QGraphicsScene();
     scene->setSceneRect(0,0,800,600);
     setScene(scene);
@@ -10,9 +10,9 @@ juego :: juego(QWidget * parent)
 
     setFixedSize(800,600);
 
-    personaje = new cuerpo(20,400,300);
+   // personaje = new cuerpo();
 
-    personaje->setPos(width()/2,height()/2);
+    personaje->setPos(0,0);
     personaje->setFlag(QGraphicsItem::ItemIsFocusable);
     personaje->setFocus();
 
@@ -20,10 +20,10 @@ juego :: juego(QWidget * parent)
 
     scene->addItem(personaje);
 
-    scene->addItem(muro1);
+    //scene->addItem(muro1);
     show();
 }
-
+/*
 void juego::keyPressEvent(QKeyEvent *evento)
 {
    //cuerpo *  personaje = new cuerpo(50,400,300);
@@ -42,3 +42,4 @@ void juego::keyPressEvent(QKeyEvent *evento)
             personaje->up();
     }
 }
+*/

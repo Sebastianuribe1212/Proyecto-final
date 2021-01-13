@@ -1,17 +1,28 @@
 #ifndef CUERPO_H
 #define CUERPO_H
+
+#include <QObject>
 #include <QGraphicsItem>
 #include <QPainter>
+#include <QTimer>
+#include <QPixmap>
 
-class cuerpo: public QGraphicsItem
+class cuerpo:  public QObject, public QGraphicsItem
 {
-
-    int r;
+    Q_OBJECT
+    /*int r;
     int posx, posy;
     int velocidad = 5;
-
+*/
 public:
-    cuerpo(int r_, int x, int y);
+    explicit cuerpo(QObject *parent = nullptr);
+   // cuerpo(int r_, int x, int y);
+
+    QTimer *timer;
+    QPixmap *pixmap;
+
+    float filas, columnas;
+    float ancho, alto;
 
     int getR() const;
     void setR(int radio);
@@ -19,12 +30,19 @@ public:
     void setPosx(int px);
     int getPosy() const;
     void setPosy(int py);
+
     QRectF boundingRect() const;
-    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = nullptr);
+
+    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
+
     void up();
     void down();
     void left();
     void right();
+
+signals:
+public slots:
+    void Actualizacion();
 };
 
 #endif // CUERPO_H

@@ -16,13 +16,11 @@ public:
 
     QGraphicsScene * scene;
 
-
-
     pared *muro1;
 
-    cuerpo *  personaje = new cuerpo(50,400,300);
 
-    void keyPressEvent(QKeyEvent * evento);
+
+    //void keyPressEvent(QKeyEvent * evento);
 };
 
 #endif // JUEGO_H
