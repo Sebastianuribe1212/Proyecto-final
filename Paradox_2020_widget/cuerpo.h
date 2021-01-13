@@ -13,7 +13,8 @@ class cuerpo:  public QObject, public QGraphicsItem
 
 private:
     int posx, posy;
-    int velocidad = 5;
+    int velocidad = 3;
+    int dir = 0;
 
 public:
     explicit cuerpo(QObject *parent = nullptr);

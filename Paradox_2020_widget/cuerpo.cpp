@@ -46,6 +46,7 @@ void cuerpo::right()
 {
     posx += 1*velocidad;
     setPos(posx, posy);
+
 }
 
 cuerpo::cuerpo(QObject *parent): QObject(parent)
@@ -61,9 +62,11 @@ cuerpo::cuerpo(QObject *parent): QObject(parent)
     ancho = 100;
     alto = 100;
 
-    timer->start(300);
-    connect(timer, &QTimer::timeout, this, &cuerpo::Actualizacion);
 
+    disconnect(timer, &QTimer::timeout, this, &cuerpo::Actualizacion);
+    timer->start(200);
+
+    dir = 0;
 
 }
 void cuerpo::Actualizacion()
@@ -74,6 +77,8 @@ void cuerpo::Actualizacion()
                 columnas = 0;
             }
             this->update(-ancho/2,-alto/2,ancho,alto);
+            disconnect(timer, &QTimer::timeout, this, &cuerpo::Actualizacion);
+
 }
 
 
@@ -84,7 +89,7 @@ QRectF cuerpo::boundingRect() const
 
 void cuerpo::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
     {
-        painter->drawPixmap(-ancho/2,-alto/2,*pixmap,columnas,300,ancho,alto);
+        painter->drawPixmap(-ancho/2,-alto/2,*pixmap,columnas,dir,ancho,alto);
 
     }
 void cuerpo::keyPressEvent(QKeyEvent *evento)
@@ -92,16 +97,29 @@ void cuerpo::keyPressEvent(QKeyEvent *evento)
 
     if (evento->key()== Qt::Key_A){
             left();
+            dir = 300 ;
+    connect(timer, &QTimer::timeout, this, &cuerpo::Actualizacion);
     }
+
     else if (evento->key()== Qt::Key_S){
             down();
+            dir = 0 ;
+    connect(timer, &QTimer::timeout, this, &cuerpo::Actualizacion);
     }
+
     else if (evento->key()== Qt::Key_D){
 
            right();
+           dir = 100;
+    connect(timer, &QTimer::timeout, this, &cuerpo::Actualizacion);
     }
+
     else if (evento->key()== Qt::Key_W){
            up();
+           dir = 200;
+    connect(timer, &QTimer::timeout, this, &cuerpo::Actualizacion);
     }
+
+
 }
 
