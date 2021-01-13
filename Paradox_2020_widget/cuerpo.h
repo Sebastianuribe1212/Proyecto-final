@@ -41,6 +41,7 @@ public:
     void left();
     void right();
 
+    void keyPressEvent(QKeyEvent * evento);
 signals:
 public slots:
     void Actualizacion();

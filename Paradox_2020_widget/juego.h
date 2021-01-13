@@ -19,8 +19,8 @@ public:
     pared *muro1;
 
 
+    cuerpo *  personaje = new cuerpo();
 
-    //void keyPressEvent(QKeyEvent * evento);
 };
 
 #endif // JUEGO_H
