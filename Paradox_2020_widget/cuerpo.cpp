@@ -22,8 +22,6 @@ void cuerpo::setPosy(int value)
     posy = value;
 }
 
-
-
 void cuerpo::up()
 {
     posy -= 1*velocidad;
@@ -49,14 +47,23 @@ void cuerpo::right()
 
 }
 
+int cuerpo::getDir() const
+{
+    return dir;
+}
+
+void cuerpo::setDir(int value)
+{
+    dir = value;
+}
+
 cuerpo::cuerpo(QObject *parent): QObject(parent)
 {
     posx = 400;
-    posy = 300;
+    posy = 550;
     timer = new QTimer();
     filas = 0;
     columnas = 0;
-    //dddsetPos(400,600);
     pixmap = new QPixmap(":/trump");
 
     ancho = 100;
@@ -64,9 +71,10 @@ cuerpo::cuerpo(QObject *parent): QObject(parent)
 
 
     disconnect(timer, &QTimer::timeout, this, &cuerpo::Actualizacion);
-    timer->start(200);
+    timer->start(100);
 
     dir = 0;
+
 
 }
 void cuerpo::Actualizacion()
@@ -89,19 +97,25 @@ QRectF cuerpo::boundingRect() const
 
 void cuerpo::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
     {
-        painter->drawPixmap(-ancho/2,-alto/2,*pixmap,columnas,dir,ancho,alto);
+       painter->drawPixmap(-ancho/2,-alto/2,*pixmap,columnas,dir,ancho,alto);
 
     }
 void cuerpo::keyPressEvent(QKeyEvent *evento)
 {
 
+    pared * muro1  = new pared(40,260,0,0);
+
+
     if (evento->key()== Qt::Key_A){
-            left();
-            dir = 300 ;
+           left();
+           setDir(300);
+            if(collidesWithItem(muro1)){
+               right();
+            }
     connect(timer, &QTimer::timeout, this, &cuerpo::Actualizacion);
     }
 
-    else if (evento->key()== Qt::Key_S){
+   else if (evento->key()== Qt::Key_S){
             down();
             dir = 0 ;
     connect(timer, &QTimer::timeout, this, &cuerpo::Actualizacion);
@@ -119,7 +133,11 @@ void cuerpo::keyPressEvent(QKeyEvent *evento)
            dir = 200;
     connect(timer, &QTimer::timeout, this, &cuerpo::Actualizacion);
     }
+    else if (evento->key()== Qt::Key_R){
+        //delete personaje;
+    }
 
 
 }
+
 

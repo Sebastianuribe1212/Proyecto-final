@@ -1,7 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file alias="trump">donalPNG.png</file>
-        <file>C:/Users/urisb/OneDrive/Pictures/118625682_3493641263999625_8533804521650949293_o.jpg</file>
     </qresource>
     <qresource prefix="/new/prefix1"/>
 </RCC>

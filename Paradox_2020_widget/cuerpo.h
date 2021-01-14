@@ -7,6 +7,7 @@
 #include <QTimer>
 #include <QPixmap>
 #include <QKeyEvent>
+#include "pared.h"
 class cuerpo:  public QObject, public QGraphicsItem
 {
     Q_OBJECT
@@ -26,6 +27,8 @@ public:
     float filas, columnas;
     float ancho, alto;
 
+
+
     int getR() const;
     void setR(int radio);
     int getPosx() const;
@@ -43,6 +46,11 @@ public:
     void right();
 
     void keyPressEvent(QKeyEvent * evento);
+    int getDir() const;
+    void setDir(int value);
+
+
+
 signals:
 public slots:
     void Actualizacion();
