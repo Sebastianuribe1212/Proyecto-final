@@ -11,12 +11,16 @@ CONFIG += c++11
 SOURCES += \
     cuerpo.cpp \
     juego.cpp \
+    launcher.cpp \
     main.cpp \
+    moneda.cpp \
     pared.cpp
 
 HEADERS += \
     cuerpo.h \
     juego.h \
+    launcher.h \
+    moneda.h \
     pared.h
 
 FORMS +=

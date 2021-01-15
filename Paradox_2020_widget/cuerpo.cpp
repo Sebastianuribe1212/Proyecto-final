@@ -110,6 +110,7 @@ void cuerpo::Actualizacion()
             this->update(-ancho/2,-alto/2,ancho,alto);
             disconnect(timer, &QTimer::timeout, this, &cuerpo::Actualizacion);
 
+
 }
 
 

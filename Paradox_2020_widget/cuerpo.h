@@ -16,7 +16,7 @@ class cuerpo:  public QObject, public QGraphicsItem
 private:
 
     int posx, posy;
-    int velocidad = 3;
+    int velocidad = 5;
     int dir = 0;
     QList<pared *> paredes;
 

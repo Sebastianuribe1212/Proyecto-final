@@ -2,6 +2,7 @@
 
 juego :: juego(QWidget * parent)
 {
+    //Creacion y set de la escena
     scene = new QGraphicsScene();
     scene->setSceneRect(0,0,800,600);
     setScene(scene);
@@ -10,32 +11,32 @@ juego :: juego(QWidget * parent)
 
     setFixedSize(800,600);
 
-
-
-
+    //creacion y set de personaje
     personaje = new cuerpo();
-
-
     personaje->setPos(400,550);
     personaje->setFlag(QGraphicsItem::ItemIsFocusable);
     personaje->setFocus();
-
-
-
     scene->addItem(personaje);
 
-    QList<pared*>pared = mundo1();
-    personaje->setPared(pared);
+    portal1 = new pared(50,50,-380,-550);
+    scene->addItem(portal1);
 
-    for(int i = 0 ; i <pared.size(); i++){
-       scene->addItem(pared.at(i));
+    //Creacion de paredes del mundo
+
+    personaje->setPared(paredaux);
+
+    for(int i = 0 ; i <paredaux.size(); i++){
+       scene->addItem(paredaux.at(i));
     }
 
 
+    //actualizacion para tomar la moneda
+    monedas = new moneda(10,400,300);
+    scene->addItem(monedas);
     time = new QTimer;
     time->start(80);
     connect(time, SIGNAL(timeout()), this,SLOT(Actualizacion()));
-
+    connect(time, SIGNAL(timeout()), this,SLOT(portal()));
 
     show();
 }
@@ -53,8 +54,6 @@ QList<pared *> juego::mundo1()
     paredes1.push_back(muro4);
     pared * muro5  = new pared(50,800,0,0);
     paredes1.push_back(muro5);
-
-
     pared * muro6 = new pared(150,100,-150,-150);
     paredes1.push_back(muro6);
     pared * muro7 = new pared(500,100,-150,-350);
@@ -78,13 +77,24 @@ QList<pared *> juego::mundo1()
 
 void juego::Actualizacion()
 {
-   /* if(muro2->collidesWithItem(personaje) )
+  if(monedas->collidesWithItem(personaje) )
     {
-      scene->removeItem(personaje);
-      delete personaje;
+      take = true;
+      scene->removeItem(monedas);
+      delete monedas;
       disconnect(time, SIGNAL(timeout()), this,SLOT(Actualizacion()));
-
-       // personaje->setPos(width()/2-30,((height()/2)/2)-105);
-    }*/
+    }
 }
 
+void juego::portal()
+{
+    if(portal1->collidesWithItem(personaje) && take == true )
+      {
+        scene->removeItem(personaje);
+        delete personaje;
+        for(int i = 0 ; i <paredaux.size(); i++){
+           scene->removeItem(paredaux.at(i));
+        }
+        disconnect(time, SIGNAL(timeout()), this,SLOT(portal()));
+      }
+}
