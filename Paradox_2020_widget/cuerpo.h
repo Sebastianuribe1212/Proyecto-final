@@ -7,15 +7,18 @@
 #include <QTimer>
 #include <QPixmap>
 #include <QKeyEvent>
+#include <QList>
 #include "pared.h"
 class cuerpo:  public QObject, public QGraphicsItem
 {
     Q_OBJECT
 
 private:
+
     int posx, posy;
     int velocidad = 3;
     int dir = 0;
+    QList<pared *> paredes;
 
 public:
     explicit cuerpo(QObject *parent = nullptr);
@@ -49,6 +52,8 @@ public:
     int getDir() const;
     void setDir(int value);
 
+    QList<pared*>getPared();
+    void setPared(QList<pared*>lista);
 
 
 signals:

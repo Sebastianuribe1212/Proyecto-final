@@ -25,6 +25,8 @@ juego :: juego(QWidget * parent)
     scene->addItem(personaje);
 
     QList<pared*>pared = mundo1();
+    personaje->setPared(pared);
+
     for(int i = 0 ; i <pared.size(); i++){
        scene->addItem(pared.at(i));
     }
@@ -58,14 +60,14 @@ QList<pared *> juego::mundo1()
     pared * muro7 = new pared(500,100,-150,-350);
     paredes1.push_back(muro7);
 
-    pared * muro7_1 = new pared(5,100,-200,-250);
+    pared * muro7_1 = new pared(5,100,-300,-250);
     paredes1.push_back(muro7_1);
 
     pared * muro8 = new pared(150,100,-500,-150);
     paredes1.push_back(muro8);
     //pared * muro9 = new pared(50,100,-600,-350);
     //paredes1.push_back(muro9);
-    pared * muro9_1 = new pared(5,100,-600,-250);
+    pared * muro9_1 = new pared(5,100,-500,-250);
     paredes1.push_back(muro9_1);
 
 
