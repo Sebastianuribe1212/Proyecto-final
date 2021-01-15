@@ -12,11 +12,13 @@ SOURCES += \
     cuerpo.cpp \
     juego.cpp \
     main.cpp \
+    moneda.cpp \
     pared.cpp
 
 HEADERS += \
     cuerpo.h \
     juego.h \
+    moneda.h \
     pared.h
 
 FORMS +=

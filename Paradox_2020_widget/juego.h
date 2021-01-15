@@ -5,12 +5,12 @@
 #include <QGraphicsView>
 #include <QGraphicsItem>
 #include <QKeyEvent>
-#include "pared.h"
 #include <QTimer>
 #include <QList>
+
 #include "pared.h"
 #include "cuerpo.h"
-
+#include "moneda.h"
 
 class juego: public QGraphicsView
 {
@@ -19,11 +19,9 @@ public:
     juego(QWidget * parent = 0);
 
     QGraphicsScene * scene;
-
     cuerpo *  personaje = new cuerpo();
-    //pared * muro2  = new pared(40,60,-100,-100);
-
     QTimer *time ;
+    moneda * monedas;
 
     QList<pared*>mundo1();
 

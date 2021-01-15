@@ -19,9 +19,6 @@ juego :: juego(QWidget * parent)
     personaje->setPos(400,550);
     personaje->setFlag(QGraphicsItem::ItemIsFocusable);
     personaje->setFocus();
-
-
-
     scene->addItem(personaje);
 
     QList<pared*>pared = mundo1();
@@ -36,6 +33,8 @@ juego :: juego(QWidget * parent)
     time->start(80);
     connect(time, SIGNAL(timeout()), this,SLOT(Actualizacion()));
 
+    monedas = new moneda(10,400,300);
+    scene->addItem(monedas);
 
     show();
 }
@@ -78,13 +77,13 @@ QList<pared *> juego::mundo1()
 
 void juego::Actualizacion()
 {
-   /* if(muro2->collidesWithItem(personaje) )
+  if(monedas->collidesWithItem(personaje) )
     {
-      scene->removeItem(personaje);
-      delete personaje;
-      disconnect(time, SIGNAL(timeout()), this,SLOT(Actualizacion()));
+      scene->removeItem(monedas);
+      delete monedas;
+    disconnect(time, SIGNAL(timeout()), this,SLOT(Actualizacion()));
 
-       // personaje->setPos(width()/2-30,((height()/2)/2)-105);
-    }*/
+
+    }
 }
 
