@@ -1,11 +1,24 @@
 #ifndef LAUNCHER_H
 #define LAUNCHER_H
 
-
-class launcher
+#include "juego.h"
+#include <QWidget>
+#include <QObject>
+#include <QTimer>
+#include <QGraphicsView>
+class launcher: public QObject
 {
+    Q_OBJECT
 public:
-    launcher();
+
+    launcher(QWidget * parent = 0);
+    QTimer *time ;
+    juego * juego1 = new juego();
+
+signals:
+public slots:
+    void Actualizacion1();
+
 };
 
 #endif // LAUNCHER_H

@@ -39,8 +39,12 @@ juego :: juego(QWidget * parent)
     connect(time, SIGNAL(timeout()), this,SLOT(portal()));
 
     show();
-}
 
+    if(finish == true){
+        setSalir(true);
+    }
+}
+/*
 QList<pared *> juego::mundo1()
 {
     QList<pared*>paredes1;
@@ -73,7 +77,7 @@ QList<pared *> juego::mundo1()
 
     return paredes1;
 
-}
+}*/
 
 void juego::Actualizacion()
 {
@@ -90,11 +94,23 @@ void juego::portal()
 {
     if(portal1->collidesWithItem(personaje) && take == true )
       {
+        finish = true;
         scene->removeItem(personaje);
         delete personaje;
         for(int i = 0 ; i <paredaux.size(); i++){
            scene->removeItem(paredaux.at(i));
         }
         disconnect(time, SIGNAL(timeout()), this,SLOT(portal()));
+
       }
+}
+
+bool juego::getSalir() const
+{
+    return salir;
+}
+
+void juego::setSalir(bool value)
+{
+    salir = value;
 }

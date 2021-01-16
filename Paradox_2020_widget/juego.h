@@ -15,22 +15,27 @@
 class juego: public QGraphicsView
 {
     Q_OBJECT
+private:
+    bool salir = false;
 public:
     juego(QWidget * parent = 0);
 
     QGraphicsScene * scene;
 
-
-
     cuerpo *  personaje = new cuerpo();
     QTimer *time ;
-    QList<pared*>mundo1();
+    //QList<pared*>mundo1();
+    pared * mund1;
 
     moneda * monedas;
     pared * portal1 ;
     bool take = false;
+    bool finish = false;
 
-    QList<pared*>paredaux = mundo1();
+    QList<pared*>paredaux = mund1->mundo1();
+    bool getSalir() const;
+    void setSalir(bool value);
+
 public slots:
     void Actualizacion();
     void portal();

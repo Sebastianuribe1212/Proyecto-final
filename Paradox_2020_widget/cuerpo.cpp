@@ -109,18 +109,12 @@ void cuerpo::Actualizacion()
             }
             this->update(-ancho/2,-alto/2,ancho,alto);
             disconnect(timer, &QTimer::timeout, this, &cuerpo::Actualizacion);
-
-
 }
 
 
 
 void cuerpo::keyPressEvent(QKeyEvent *evento)
 {
-
-    //pared * muro1  = new pared(40,260,0,0);
-
-
     if (evento->key()== Qt::Key_A){
            left();
            setDir(300);
