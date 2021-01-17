@@ -52,3 +52,12 @@ QList<pared *> pared::mundo1()
 
     return paredes1;
 }
+
+QList<pared *> pared::mundo2()
+{
+    QList<pared*>paredes1;
+    pared * muro1  = new pared(800,50,0,0);
+    paredes1.push_back(muro1);
+
+    return paredes1;
+}

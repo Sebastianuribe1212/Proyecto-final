@@ -1,6 +1,6 @@
-#include "juego.h"
+#include "juego2.h"
 
-juego :: juego(QWidget * parent)
+juego2 :: juego2(QWidget * parent)
 {
     //Creacion y set de la escena
     scene = new QGraphicsScene();
@@ -45,7 +45,7 @@ juego :: juego(QWidget * parent)
     }
 }
 
-void juego::Actualizacion()
+void juego2::Actualizacion()
 {
   if(monedas->collidesWithItem(personaje) )
     {
@@ -56,7 +56,7 @@ void juego::Actualizacion()
     }
 }
 
-void juego::portal()
+void juego2::portal()
 {
     if(portal1->collidesWithItem(personaje) && take == true )
       {
@@ -71,12 +71,12 @@ void juego::portal()
       }
 }
 
-bool juego::getSalir() const
+bool juego2::getSalir() const
 {
     return salir;
 }
 
-void juego::setSalir(bool value)
+void juego2::setSalir(bool value)
 {
     salir = value;
 }

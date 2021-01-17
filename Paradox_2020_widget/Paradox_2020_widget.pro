@@ -11,6 +11,7 @@ CONFIG += c++11
 SOURCES += \
     cuerpo.cpp \
     juego.cpp \
+    juego2.cpp \
     launcher.cpp \
     main.cpp \
     moneda.cpp \
@@ -19,6 +20,7 @@ SOURCES += \
 HEADERS += \
     cuerpo.h \
     juego.h \
+    juego2.h \
     launcher.h \
     moneda.h \
     pared.h
