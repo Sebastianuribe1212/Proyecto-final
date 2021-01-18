@@ -32,7 +32,8 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-DISTFILES +=
+DISTFILES += \
+    ../1x/Mesa de trabajo 1.png
 
 RESOURCES += \
     Imagenes/Personaje.qrc

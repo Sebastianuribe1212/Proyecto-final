@@ -9,10 +9,10 @@ cuerpo::cuerpo(QObject *parent): QObject(parent)
     timer = new QTimer();
     filas = 0;
     columnas = 0;
-    pixmap = new QPixmap(":/trump");
+    pixmap = new QPixmap(":/negro.png");
 
-    ancho = 90;
-    alto = 85;
+    ancho = 80;
+    alto = 90;
 
 
     disconnect(timer, &QTimer::timeout, this, &cuerpo::Actualizacion);

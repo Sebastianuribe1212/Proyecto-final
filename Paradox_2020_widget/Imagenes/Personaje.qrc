@@ -1,6 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file alias="trump">donalPNG.png</file>
+        <file>negro.png</file>
     </qresource>
     <qresource prefix="/new/prefix1"/>
 </RCC>
