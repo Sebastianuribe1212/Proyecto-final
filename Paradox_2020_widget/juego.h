@@ -24,7 +24,7 @@ public:
 
     cuerpo *  personaje = new cuerpo();
     QTimer *time ;
-    //QList<pared*>mundo1();
+
     pared * mund1;
 
     moneda * monedas;
