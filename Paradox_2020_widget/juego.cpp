@@ -31,7 +31,7 @@ juego :: juego(QWidget * parent)
 
 
     //actualizacion para tomar la moneda
-    monedas = new moneda(10,400,300);
+    monedas = new moneda();
     scene->addItem(monedas);
     time = new QTimer;
     time->start(80);
