@@ -20,8 +20,11 @@ SOURCES += \
 HEADERS += \
     cuerpo.h \
     juego.h \
+<<<<<<< HEAD
     juego2.h \
     launcher.h \
+=======
+>>>>>>> 137af9f2218192a3e100fc976ab3a81a1ae156dc
     moneda.h \
     pared.h
 

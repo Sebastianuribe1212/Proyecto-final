@@ -21,9 +21,9 @@ public:
     juego(QWidget * parent = 0);
 
     QGraphicsScene * scene;
-
     cuerpo *  personaje = new cuerpo();
     QTimer *time ;
+    moneda * monedas;
 
     pared * mund1;
 

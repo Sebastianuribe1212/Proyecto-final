@@ -18,12 +18,17 @@ juego :: juego(QWidget * parent)
     personaje->setFocus();
     scene->addItem(personaje);
 
+<<<<<<< HEAD
     portal1 = new pared(50,50,-380,-550);
     scene->addItem(portal1);
 
     //Creacion de paredes del mundo
 
     personaje->setPared(paredaux);
+=======
+    QList<pared*>pared = mundo1();
+    personaje->setPared(pared);
+>>>>>>> 137af9f2218192a3e100fc976ab3a81a1ae156dc
 
     for(int i = 0 ; i <paredaux.size(); i++){
        scene->addItem(paredaux.at(i));
@@ -36,7 +41,13 @@ juego :: juego(QWidget * parent)
     time = new QTimer;
     time->start(80);
     connect(time, SIGNAL(timeout()), this,SLOT(Actualizacion()));
+<<<<<<< HEAD
     connect(time, SIGNAL(timeout()), this,SLOT(portal()));
+=======
+
+    monedas = new moneda(10,400,300);
+    scene->addItem(monedas);
+>>>>>>> 137af9f2218192a3e100fc976ab3a81a1ae156dc
 
     show();
 
@@ -49,6 +60,7 @@ void juego::Actualizacion()
 {
   if(monedas->collidesWithItem(personaje) )
     {
+<<<<<<< HEAD
       take = true;
       scene->removeItem(monedas);
       delete monedas;
@@ -69,6 +81,14 @@ void juego::portal()
         disconnect(time, SIGNAL(timeout()), this,SLOT(portal()));
 
       }
+=======
+      scene->removeItem(monedas);
+      delete monedas;
+    disconnect(time, SIGNAL(timeout()), this,SLOT(Actualizacion()));
+
+
+    }
+>>>>>>> 137af9f2218192a3e100fc976ab3a81a1ae156dc
 }
 
 bool juego::getSalir() const
