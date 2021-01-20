@@ -13,12 +13,14 @@ juego2 :: juego2(QWidget * parent)
 
     //creacion y set de personaje
     personaje = new cuerpo();
-    personaje->setPos(400,550);
+    personaje->setPosx(750);
+    personaje->setPosy(50);
+    personaje->setPos(750,50);
     personaje->setFlag(QGraphicsItem::ItemIsFocusable);
     personaje->setFocus();
     scene->addItem(personaje);
 
-    portal1 = new pared(50,50,-380,-550);
+    portal1 = new pared(50,50,-740,-30);
     scene->addItem(portal1);
 
     //Creacion de paredes del mundo
@@ -32,7 +34,7 @@ juego2 :: juego2(QWidget * parent)
 
     //actualizacion para tomar la moneda
     monedas = new moneda();
-    monedas->setPos(400,300);
+    monedas->setPos(20,50);
     scene->addItem(monedas);
     time = new QTimer;
     time->start(80);

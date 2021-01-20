@@ -9,7 +9,7 @@ launcher::launcher(QWidget * parent)
 }
 void launcher::Actualizacion1()
 {
-    if(juego_2->getSalir() == true){
-        delete juego_2;
+    if(juego_3->getSalir() == true){
+        delete juego_3;
     }
 }
