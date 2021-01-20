@@ -1,13 +1,12 @@
 #include "moneda.h"
 
-<<<<<<< HEAD
 moneda::moneda()
 {
     setPixmap(QPixmap(":/negro.png"));
     setScale(0.35);
 }
 
-=======
+
 moneda::moneda(int r_, int x, int y)
 {
     r = r_;
@@ -57,4 +56,3 @@ void moneda::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QW
     painter->setBrush(Qt::darkYellow);
     painter->drawEllipse(boundingRect());
 }
->>>>>>> 137af9f2218192a3e100fc976ab3a81a1ae156dc

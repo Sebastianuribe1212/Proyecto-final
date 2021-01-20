@@ -12,6 +12,7 @@ SOURCES += \
     cuerpo.cpp \
     juego.cpp \
     juego2.cpp \
+    juego3.cpp \
     launcher.cpp \
     main.cpp \
     moneda.cpp \
@@ -21,8 +22,8 @@ HEADERS += \
     cuerpo.h \
     juego.h \
     juego2.h \
+    juego3.h \
     launcher.h \
-
     moneda.h \
     pared.h
 
@@ -33,8 +34,7 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-DISTFILES += \
-    ../1x/Mesa de trabajo 1.png
-
 RESOURCES += \
-    Imagenes/Personaje.qrc
+    Images/imagenes.qrc
+
+DISTFILES +=

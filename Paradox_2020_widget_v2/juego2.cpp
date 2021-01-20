@@ -1,6 +1,6 @@
-#include "juego.h"
+#include "juego2.h"
 
-juego :: juego(QWidget * parent)
+juego2 :: juego2(QWidget * parent)
 {
     //Creacion y set de la escena
     scene = new QGraphicsScene();
@@ -18,17 +18,12 @@ juego :: juego(QWidget * parent)
     personaje->setFocus();
     scene->addItem(personaje);
 
-
     portal1 = new pared(50,50,-380,-550);
     scene->addItem(portal1);
 
     //Creacion de paredes del mundo
 
     personaje->setPared(paredaux);
-
-    QList<pared*>pared = mundo1();
-    personaje->setPared(pared);
-
 
     for(int i = 0 ; i <paredaux.size(); i++){
        scene->addItem(paredaux.at(i));
@@ -37,17 +32,12 @@ juego :: juego(QWidget * parent)
 
     //actualizacion para tomar la moneda
     monedas = new moneda();
+    monedas->setPos(400,300);
     scene->addItem(monedas);
     time = new QTimer;
     time->start(80);
     connect(time, SIGNAL(timeout()), this,SLOT(Actualizacion()));
-
     connect(time, SIGNAL(timeout()), this,SLOT(portal()));
-
-
-    monedas = new moneda(10,400,300);
-    scene->addItem(monedas);
-
 
     show();
 
@@ -56,11 +46,10 @@ juego :: juego(QWidget * parent)
     }
 }
 
-void juego::Actualizacion()
+void juego2::Actualizacion()
 {
   if(monedas->collidesWithItem(personaje) )
     {
-
       take = true;
       scene->removeItem(monedas);
       delete monedas;
@@ -68,7 +57,7 @@ void juego::Actualizacion()
     }
 }
 
-void juego::portal()
+void juego2::portal()
 {
     if(portal1->collidesWithItem(personaje) && take == true )
       {
@@ -78,24 +67,21 @@ void juego::portal()
         for(int i = 0 ; i <paredaux.size(); i++){
            scene->removeItem(paredaux.at(i));
         }
+        scene->removeItem(portal1);
+        delete portal1;
         disconnect(time, SIGNAL(timeout()), this,SLOT(portal()));
 
       }
-
-      scene->removeItem(monedas);
-      delete monedas;
-    disconnect(time, SIGNAL(timeout()), this,SLOT(Actualizacion()));
-
-
-    }
 }
 
-bool juego::getSalir() const
+bool juego2::getSalir() const
 {
     return salir;
 }
 
-void juego::setSalir(bool value)
+void juego2::setSalir(bool value)
 {
     salir = value;
+
+
 }
