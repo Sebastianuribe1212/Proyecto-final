@@ -77,8 +77,14 @@ QList<pared *> pared::mundo2()
 QList<pared *> pared::mundo3()
 {
     QList<pared*>paredes1;
-    pared * muro1  = new pared(800,50,0,0);
+    pared * muro1  = new pared(50,800,-800,0);
     paredes1.push_back(muro1);
+    pared * muro2  = new pared(50,800,75,0);
+    paredes1.push_back(muro2);
+    pared * muro3  = new pared(800,50,0,75);
+    paredes1.push_back(muro3);
+    pared * muro4  = new pared(800,50,0,-600);
+    paredes1.push_back(muro4);
 
     return paredes1;
 }
