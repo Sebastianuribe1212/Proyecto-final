@@ -1,5 +1,6 @@
 debug/cuerpo.o
 debug/enemy1.o
+debug/enemy2.o
 debug/juego.o
 debug/juego2.o
 debug/juego3.o
@@ -10,6 +11,7 @@ debug/pared.o
 debug/qrc_imagenes.o
 debug/moc_cuerpo.o
 debug/moc_enemy1.o
+debug/moc_enemy2.o
 debug/moc_juego.o
 debug/moc_juego2.o
 debug/moc_juego3.o

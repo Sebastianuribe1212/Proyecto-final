@@ -20,7 +20,7 @@ public:
 
     int posx, posy;
     int direccion = 1;
-    int velocidad = 5;
+    int velocidad = 8;
 
     float ancho, alto;
 

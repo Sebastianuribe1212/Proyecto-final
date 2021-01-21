@@ -4,11 +4,11 @@
 enemy2::enemy2(QObject *parent): QObject(parent)
 {
     pixmap = new QPixmap(":/abeja.png");
-    ancho = 150;
-    alto = 150;
-    posx=100;
+    ancho = 1920;
+    alto = 1846;
+    posx=50;
     posy=80;
-    setScale(0.25);
+    setScale(0.025);
 
 }
 

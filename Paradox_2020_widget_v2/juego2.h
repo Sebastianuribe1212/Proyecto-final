@@ -26,6 +26,8 @@ public:
     cuerpo *  personaje = new cuerpo();
     QTimer *time ;
 
+    QTimer *abeja ;
+
     pared * mund2;
 
     enemy2 * enemigo1 = new enemy2();

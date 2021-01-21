@@ -15,8 +15,8 @@ public:
 
     launcher(QWidget * parent = 0);
     QTimer *time ;
-    juego * juego1 = new juego();
-    //juego2 * juego_2 = new juego2();
+    //juego * juego1 = new juego();
+    juego2 * juego_2 = new juego2();
    //juego3 * juego_3 = new juego3();
 
 signals:

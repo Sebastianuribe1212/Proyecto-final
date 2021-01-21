@@ -1,5 +1,6 @@
 release/cuerpo.o
 release/enemy1.o
+release/enemy2.o
 release/juego.o
 release/juego2.o
 release/juego3.o
@@ -10,6 +11,7 @@ release/pared.o
 release/qrc_imagenes.o
 release/moc_cuerpo.o
 release/moc_enemy1.o
+release/moc_enemy2.o
 release/moc_juego.o
 release/moc_juego2.o
 release/moc_juego3.o
