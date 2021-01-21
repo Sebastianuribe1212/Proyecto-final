@@ -23,6 +23,11 @@ juego2 :: juego2(QWidget * parent)
     portal1 = new pared(50,50,-740,-30);
     scene->addItem(portal1);
 
+    enemigo1->posx = 100;
+    enemigo1 ->posy = 80;
+    enemigo1->setPos(100,80);
+    enemigo1->direccion=1;
+    scene->addItem(enemigo1);
     //Creacion de paredes del mundo
 
     personaje->setPared(paredaux);
@@ -73,7 +78,23 @@ void juego2::portal()
         delete portal1;
         disconnect(time, SIGNAL(timeout()), this,SLOT(portal()));
 
+    }
+}
+
+void juego2::enemy1()
+{
+  if(enemigo1->direccion <= 2){
+      enemigo1->down();
+      enemigo1->direccion +=1;
+  }
+  else if(enemigo1->direccion <= 2){
+      enemigo1->down2();
+      enemigo1->direccion +=1;
+      if(enemigo1->direccion == 4){
+          enemigo1->direccion =1;
       }
+  }
+  if(enemigo1->collidesWithItem())
 }
 
 bool juego2::getSalir() const

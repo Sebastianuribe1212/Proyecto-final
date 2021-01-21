@@ -11,6 +11,7 @@
 #include "pared.h"
 #include "cuerpo.h"
 #include "moneda.h"
+#include "enemy2.h"
 
 class juego2: public QGraphicsView
 {
@@ -27,6 +28,7 @@ public:
 
     pared * mund2;
 
+    enemy2 * enemigo1 = new enemy2();
     moneda * monedas;
     pared * portal1 ;
     bool take = false;
@@ -39,5 +41,6 @@ public:
 public slots:
     void Actualizacion();
     void portal();
+    void enemy1();
 };
 #endif // JUEGO2_H

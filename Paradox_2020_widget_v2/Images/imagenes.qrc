@@ -2,5 +2,7 @@
     <qresource prefix="/">
         <file alias="Mon_tapabocas">2833278.png</file>
         <file alias="Personaje">Mesa de trabajo 1.png</file>
+        <file>Slimeball_JE2_BE2.png</file>
+        <file>abeja.png</file>
     </qresource>
 </RCC>

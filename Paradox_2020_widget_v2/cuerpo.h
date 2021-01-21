@@ -15,15 +15,15 @@ class cuerpo:  public QObject, public QGraphicsItem
 
 private:
 
-    int posx, posy;
+
     int velocidad = 5;
     int dir = 0;
     QList<pared *> paredes;
 
 public:
     explicit cuerpo(QObject *parent = nullptr);
-   // cuerpo(int r_, int x, int y);
 
+    int posx, posy;
     QTimer *timer;
     QPixmap *pixmap;
 

@@ -10,6 +10,8 @@ CONFIG += c++11
 
 SOURCES += \
     cuerpo.cpp \
+    enemy1.cpp \
+    enemy2.cpp \
     juego.cpp \
     juego2.cpp \
     juego3.cpp \
@@ -20,6 +22,8 @@ SOURCES += \
 
 HEADERS += \
     cuerpo.h \
+    enemy1.h \
+    enemy2.h \
     juego.h \
     juego2.h \
     juego3.h \

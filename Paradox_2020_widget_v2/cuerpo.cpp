@@ -31,6 +31,9 @@ void cuerpo::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QW
        painter->drawPixmap(-ancho/2,-alto/2,*pixmap,columnas,dir,ancho,alto);
 
     }
+
+
+
 int cuerpo::getPosx() const
 {
     return posx;
