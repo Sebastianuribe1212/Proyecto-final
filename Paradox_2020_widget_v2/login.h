@@ -6,6 +6,7 @@
 #include "QtSql/QSqlQuery"
 #include <QWidget>
 
+
 namespace Ui {
 class Login;
 }
@@ -18,8 +19,26 @@ public:
     explicit Login(QWidget *parent = nullptr);
     ~Login();
 
+    bool getSalir() const;
+    void setSalir(bool value);
+
+
+
+    QString getMundo() const;
+    void setMundo(const QString &value);
+
+    QString getUser() const;
+    void setUser(const QString &value);
+
+private slots:
+    void on_entrar_clicked();
+
 private:
     Ui::Login *ui;
+    bool salir = false;
+    QString mundo;
+    QString user;
+
 };
 
 #endif // LOGIN_H

@@ -25,12 +25,13 @@ public:
     QLabel *label_2;
     QPushButton *enviar;
     QLineEdit *usuario;
-    QLineEdit *password;
+    QLineEdit *contra;
 
     void setupUi(QWidget *Registro)
     {
         if (Registro->objectName().isEmpty())
             Registro->setObjectName(QString::fromUtf8("Registro"));
+        Registro->setWindowModality(Qt::ApplicationModal);
         Registro->resize(400, 300);
         label = new QLabel(Registro);
         label->setObjectName(QString::fromUtf8("label"));
@@ -44,10 +45,10 @@ public:
         usuario = new QLineEdit(Registro);
         usuario->setObjectName(QString::fromUtf8("usuario"));
         usuario->setGeometry(QRect(70, 70, 181, 21));
-        password = new QLineEdit(Registro);
-        password->setObjectName(QString::fromUtf8("password"));
-        password->setGeometry(QRect(70, 130, 181, 21));
-        password->setEchoMode(QLineEdit::Password);
+        contra = new QLineEdit(Registro);
+        contra->setObjectName(QString::fromUtf8("contra"));
+        contra->setGeometry(QRect(70, 130, 181, 21));
+        contra->setEchoMode(QLineEdit::Password);
 
         retranslateUi(Registro);
 

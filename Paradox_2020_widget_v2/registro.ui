@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>Registro</class>
  <widget class="QWidget" name="Registro">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -62,7 +65,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="password">
+  <widget class="QLineEdit" name="contra">
    <property name="geometry">
     <rect>
      <x>70</x>

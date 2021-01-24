@@ -26,6 +26,7 @@ public:
     {
         if (Form->objectName().isEmpty())
             Form->setObjectName(QString::fromUtf8("Form"));
+        Form->setWindowModality(Qt::WindowModal);
         Form->setEnabled(true);
         Form->resize(668, 443);
         boton2 = new QPushButton(Form);

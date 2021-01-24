@@ -18,6 +18,7 @@ class Registro : public QWidget
 public:
     explicit Registro(QWidget *parent = nullptr);
     ~Registro();
+    void CrearTabla();
 
 private slots:
     void on_enviar_clicked();

@@ -1,3 +1,4 @@
+debug/admin_partidas.o
 debug/cuerpo.o
 debug/enemy1.o
 debug/enemy2.o
@@ -13,6 +14,7 @@ debug/moneda.o
 debug/pared.o
 debug/registro.o
 debug/qrc_imagenes.o
+debug/moc_admin_partidas.o
 debug/moc_cuerpo.o
 debug/moc_enemy1.o
 debug/moc_enemy2.o

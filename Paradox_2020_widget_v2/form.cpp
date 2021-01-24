@@ -18,6 +18,10 @@ Form::Form(QWidget *parent) :
     {
         qDebug()<<"Error";
     }
+
+    timer = new QTimer;
+    timer->start(80);
+    connect(timer,SIGNAL(timeout()), this,SLOT(Actualizacion()));
 }
 
 Form::~Form()
@@ -32,8 +36,59 @@ void Form::on_boton2_clicked()
     registro->show();
 }
 
+void Form::Actualizacion()
+{
+    if(login->getSalir() == true){
+           setMundo(login->getMundo());
+           setUser(login->getUser());
+           login->hide();
+           setSalir(true);
+           disconnect(timer,SIGNAL(timeout()), this,SLOT(Actualizacion()));
+    }
+}
+
 void Form::on_boton1_clicked()
 {
-    Login *login = new Login(0);
+
     login->show();
+}
+
+QSqlDatabase Form::getDbmain() const
+{
+    return dbmain;
+}
+
+void Form::setDbmain(const QSqlDatabase &value)
+{
+    dbmain = value;
+}
+
+bool Form::getSalir() const
+{
+    return salir;
+}
+
+void Form::setSalir(bool value)
+{
+    salir = value;
+}
+
+QString Form::getUser() const
+{
+    return user;
+}
+
+void Form::setUser(const QString &value)
+{
+    user = value;
+}
+
+QString Form::getMundo() const
+{
+    return mundo;
+}
+
+void Form::setMundo(const QString &value)
+{
+    mundo = value;
 }
