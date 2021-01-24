@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -12,26 +12,37 @@ SOURCES += \
     cuerpo.cpp \
     enemy1.cpp \
     enemy2.cpp \
+    enemy3.cpp \
+    form.cpp \
     juego.cpp \
     juego2.cpp \
     juego3.cpp \
     launcher.cpp \
+    login.cpp \
     main.cpp \
     moneda.cpp \
-    pared.cpp
+    pared.cpp \
+    registro.cpp
 
 HEADERS += \
     cuerpo.h \
     enemy1.h \
     enemy2.h \
+    enemy3.h \
+    form.h \
     juego.h \
     juego2.h \
     juego3.h \
     launcher.h \
+    login.h \
     moneda.h \
-    pared.h
+    pared.h \
+    registro.h
 
-FORMS +=
+FORMS += \
+    form.ui \
+    login.ui \
+    registro.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

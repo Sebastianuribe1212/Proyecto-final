@@ -1,6 +1,5 @@
 #include "juego3.h"
 
-
 juego3 :: juego3(QWidget * parent)
 {
     //Creacion y set de la escena
@@ -14,13 +13,17 @@ juego3 :: juego3(QWidget * parent)
 
     //creacion y set de personaje
     personaje = new cuerpo();
-    personaje->setPos(400,550);
+    personaje->setPosx(750);
+    personaje->setPosy(50);
+    personaje->setPos(750,50);
     personaje->setFlag(QGraphicsItem::ItemIsFocusable);
     personaje->setFocus();
     scene->addItem(personaje);
 
-    portal1 = new pared(50,50,-380,-550);
+    portal1 = new pared(50,50,-740,-30);
     scene->addItem(portal1);
+
+
 
     //Creacion de paredes del mundo
 
@@ -30,15 +33,22 @@ juego3 :: juego3(QWidget * parent)
        scene->addItem(paredaux.at(i));
     }
 
+    //enemigo1->posx =100;
+    //enemigo1 ->posy = 10;
+    //enemigo1->setPos(100,80);
+
+    scene->addItem(enemigo1);
 
     //actualizacion para tomar la moneda
     monedas = new moneda();
-    monedas->setPos(400,300);
+    monedas->setPos(350,280);
     scene->addItem(monedas);
     time = new QTimer;
     time->start(80);
+
     connect(time, SIGNAL(timeout()), this,SLOT(Actualizacion()));
     connect(time, SIGNAL(timeout()), this,SLOT(portal()));
+    connect(time, SIGNAL(timeout()), this,SLOT(enemy1()));
 
     show();
 
@@ -54,6 +64,8 @@ void juego3::Actualizacion()
       take = true;
       scene->removeItem(monedas);
       delete monedas;
+
+
       disconnect(time, SIGNAL(timeout()), this,SLOT(Actualizacion()));
     }
 }
@@ -70,11 +82,57 @@ void juego3::portal()
         }
         scene->removeItem(portal1);
         delete portal1;
+
+        scene->removeItem(enemigo1);
+        delete enemigo1;
+
+
+        disconnect(time, SIGNAL(timeout()), this,SLOT(enemy1()));
         disconnect(time, SIGNAL(timeout()), this,SLOT(portal()));
 
-      }
+    }
 }
 
+void juego3::enemy1()
+{
+    int centrox = 390, centroy = 280, r1 = 50, x , y;
+
+    if(personaje->collidesWithItem(enemigo1) )
+      {
+        if(take == true){
+            take = false;
+            monedas = new moneda();
+            monedas->setPos(350,280);
+            scene->addItem(monedas);
+            connect(time, SIGNAL(timeout()), this,SLOT(Actualizacion()));
+
+        }
+
+        personaje->posx=750;
+        personaje->posy=50;
+        personaje->setPos(750,50);
+
+        enemigo1->posx =100;
+        enemigo1 ->posy = 10;
+        enemigo1->setPos(100,80);
+
+    }
+
+    t += 20;
+
+    /*if(t > 360){
+        t=0;
+    }
+*/
+    x = centrox + 200  * cos(t*0.01);
+    y = centroy + 200 * sin(t*0.01);
+
+    enemigo1->posx =x;
+    enemigo1 ->posy = y;
+    enemigo1->setPos(x,y);
+
+
+}
 bool juego3::getSalir() const
 {
     return salir;
@@ -83,4 +141,6 @@ bool juego3::getSalir() const
 void juego3::setSalir(bool value)
 {
     salir = value;
+
+
 }

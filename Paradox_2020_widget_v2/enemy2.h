@@ -47,7 +47,6 @@ public:
 
 
 
-;
 };
 
 #endif // ENEMY2_H
