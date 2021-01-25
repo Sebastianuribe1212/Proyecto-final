@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -19,12 +20,16 @@ QT_BEGIN_NAMESPACE
 class Ui_Admin_partidas
 {
 public:
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton_3;
-    QPushButton *pushButton_4;
     QPushButton *pushButton_5;
     QPushButton *user;
+    QWidget *widget;
+    QVBoxLayout *verticalLayout_2;
+    QVBoxLayout *verticalLayout;
+    QPushButton *Cargarpartida;
+    QPushButton *nuevapartida;
+    QPushButton *eliminarpartida;
+    QPushButton *reiniciarpartida;
+    QPushButton *Guardar;
 
     void setupUi(QWidget *Admin_partidas)
     {
@@ -32,24 +37,50 @@ public:
             Admin_partidas->setObjectName(QString::fromUtf8("Admin_partidas"));
         Admin_partidas->setWindowModality(Qt::WindowModal);
         Admin_partidas->resize(207, 342);
-        pushButton = new QPushButton(Admin_partidas);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(60, 110, 80, 21));
-        pushButton_2 = new QPushButton(Admin_partidas);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(60, 150, 80, 21));
-        pushButton_3 = new QPushButton(Admin_partidas);
-        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
-        pushButton_3->setGeometry(QRect(60, 190, 80, 21));
-        pushButton_4 = new QPushButton(Admin_partidas);
-        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
-        pushButton_4->setGeometry(QRect(60, 230, 80, 21));
+        Admin_partidas->setFocusPolicy(Qt::NoFocus);
         pushButton_5 = new QPushButton(Admin_partidas);
         pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
-        pushButton_5->setGeometry(QRect(40, 270, 131, 41));
+        pushButton_5->setGeometry(QRect(60, 270, 80, 21));
         user = new QPushButton(Admin_partidas);
         user->setObjectName(QString::fromUtf8("user"));
-        user->setGeometry(QRect(20, 30, 171, 61));
+        user->setGeometry(QRect(30, 30, 147, 41));
+        widget = new QWidget(Admin_partidas);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        widget->setGeometry(QRect(60, 90, 86, 133));
+        verticalLayout_2 = new QVBoxLayout(widget);
+        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
+        verticalLayout_2->setContentsMargins(0, 0, 0, 0);
+        verticalLayout = new QVBoxLayout();
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        Cargarpartida = new QPushButton(widget);
+        Cargarpartida->setObjectName(QString::fromUtf8("Cargarpartida"));
+        Cargarpartida->setFocusPolicy(Qt::NoFocus);
+
+        verticalLayout->addWidget(Cargarpartida);
+
+        nuevapartida = new QPushButton(widget);
+        nuevapartida->setObjectName(QString::fromUtf8("nuevapartida"));
+
+        verticalLayout->addWidget(nuevapartida);
+
+        eliminarpartida = new QPushButton(widget);
+        eliminarpartida->setObjectName(QString::fromUtf8("eliminarpartida"));
+
+        verticalLayout->addWidget(eliminarpartida);
+
+        reiniciarpartida = new QPushButton(widget);
+        reiniciarpartida->setObjectName(QString::fromUtf8("reiniciarpartida"));
+
+        verticalLayout->addWidget(reiniciarpartida);
+
+
+        verticalLayout_2->addLayout(verticalLayout);
+
+        Guardar = new QPushButton(widget);
+        Guardar->setObjectName(QString::fromUtf8("Guardar"));
+
+        verticalLayout_2->addWidget(Guardar);
+
 
         retranslateUi(Admin_partidas);
 
@@ -59,12 +90,13 @@ public:
     void retranslateUi(QWidget *Admin_partidas)
     {
         Admin_partidas->setWindowTitle(QCoreApplication::translate("Admin_partidas", "Form", nullptr));
-        pushButton->setText(QCoreApplication::translate("Admin_partidas", "Nueva partida", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("Admin_partidas", "Cargar partida", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("Admin_partidas", "Eliminar partida", nullptr));
-        pushButton_4->setText(QCoreApplication::translate("Admin_partidas", "Reiniciar", nullptr));
         pushButton_5->setText(QCoreApplication::translate("Admin_partidas", "Multijugador", nullptr));
         user->setText(QCoreApplication::translate("Admin_partidas", "Click para ingresar tu usuario", nullptr));
+        Cargarpartida->setText(QCoreApplication::translate("Admin_partidas", "Cargar partida", nullptr));
+        nuevapartida->setText(QCoreApplication::translate("Admin_partidas", "Nueva partida", nullptr));
+        eliminarpartida->setText(QCoreApplication::translate("Admin_partidas", "Eliminar partida", nullptr));
+        reiniciarpartida->setText(QCoreApplication::translate("Admin_partidas", "Reiniciar", nullptr));
+        Guardar->setText(QCoreApplication::translate("Admin_partidas", "Guardar partida", nullptr));
     } // retranslateUi
 
 };

@@ -1,5 +1,5 @@
 #include "juego.h"
-
+#include <QMessageBox>
 juego :: juego(QWidget * parent)
 {
     //Creacion y set de la escena
@@ -8,16 +8,18 @@ juego :: juego(QWidget * parent)
     setScene(scene);
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-
     setFixedSize(800,600);
 
     //creacion y set de personaje
     personaje = new cuerpo();
     personaje->setPos(400,550);
-    personaje->setFlag(QGraphicsItem::ItemIsFocusable);
-    personaje->setFocus();
+    personaje->setFlag(QGraphicsItem::ItemIsFocusable, true);
     scene->addItem(personaje);
+    scene->setFocusItem(personaje);
+    personaje->setFocus();
 
+    QMessageBox::information(this,tr("Inicia el juego"),tr("PRESIONA LA TECLA TAB O DALE CLICK SOBRE EL PERSONAJE"));
+    //TabFocusReason
     portal1 = new pared(50,50,-380,-550);
     scene->addItem(portal1);
 
@@ -50,9 +52,6 @@ juego :: juego(QWidget * parent)
 
     show();
 
-    if(finish == true){
-        setSalir(true);
-    }
 }
 
 void juego::Actualizacion()
@@ -71,7 +70,7 @@ void juego::portal()
 {
     if(portal1->collidesWithItem(personaje) && take == true )
       {
-        finish = true;
+
         scene->removeItem(personaje);
         delete personaje;
         for(int i = 0 ; i <paredaux.size(); i++){
@@ -86,9 +85,12 @@ void juego::portal()
         scene->removeItem(enemigo2);
         delete enemigo2;
 
+        setSalir(true);
+
         disconnect(time, SIGNAL(timeout()), this,SLOT(MoveEnemy()));
         disconnect(time, SIGNAL(timeout()), this,SLOT(MoveEnemy2()));
         disconnect(time, SIGNAL(timeout()), this,SLOT(portal()));
+
 
     }
 }

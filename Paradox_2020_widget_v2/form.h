@@ -32,8 +32,6 @@ public:
     bool getSalir() const;
     void setSalir(bool value);
 
-    QSqlDatabase getDbmain() const;
-    void setDbmain(const QSqlDatabase &value);
 
 private slots:
     void on_boton2_clicked();
@@ -42,7 +40,7 @@ private slots:
 
 private:
     Ui::Form *ui;
-    QSqlDatabase dbmain;
+
     QString mundo;
     QString user;
     bool salir = false;

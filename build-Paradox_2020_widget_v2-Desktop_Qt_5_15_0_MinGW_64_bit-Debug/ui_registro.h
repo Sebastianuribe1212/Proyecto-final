@@ -48,6 +48,7 @@ public:
         contra = new QLineEdit(Registro);
         contra->setObjectName(QString::fromUtf8("contra"));
         contra->setGeometry(QRect(70, 130, 181, 21));
+        contra->setFocusPolicy(Qt::ClickFocus);
         contra->setEchoMode(QLineEdit::Password);
 
         retranslateUi(Registro);

@@ -38,7 +38,7 @@ public:
     enemy1 * enemigo2 = new enemy1();
 
     bool take = false;
-    bool finish = false;
+
 
     QList<pared*>paredaux = mund1->mundo1();
 

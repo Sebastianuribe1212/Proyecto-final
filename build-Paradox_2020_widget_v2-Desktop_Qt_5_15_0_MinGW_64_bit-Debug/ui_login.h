@@ -48,6 +48,7 @@ public:
         password = new QLineEdit(Login);
         password->setObjectName(QString::fromUtf8("password"));
         password->setGeometry(QRect(70, 100, 113, 21));
+        password->setFocusPolicy(Qt::ClickFocus);
         password->setEchoMode(QLineEdit::Password);
 
         retranslateUi(Login);

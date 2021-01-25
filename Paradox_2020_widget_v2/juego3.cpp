@@ -1,5 +1,5 @@
 #include "juego3.h"
-
+#include <QMessageBox>
 juego3 :: juego3(QWidget * parent)
 {
     //Creacion y set de la escena
@@ -19,7 +19,7 @@ juego3 :: juego3(QWidget * parent)
     personaje->setFlag(QGraphicsItem::ItemIsFocusable);
     personaje->setFocus();
     scene->addItem(personaje);
-
+    QMessageBox::information(this,tr("Inicia el juego"),tr("PRESIONA LA TECLA TAB O DALE CLICK SOBRE EL PERSONAJE"));
     portal1 = new pared(50,50,-740,-30);
     scene->addItem(portal1);
 
@@ -86,7 +86,7 @@ void juego3::portal()
         scene->removeItem(enemigo1);
         delete enemigo1;
 
-
+        QMessageBox::information(this,tr("GANASTEEEE"),tr("ACABASTE TODAS TUS MISIONES!!!"));
         disconnect(time, SIGNAL(timeout()), this,SLOT(enemy1()));
         disconnect(time, SIGNAL(timeout()), this,SLOT(portal()));
 

@@ -34,7 +34,6 @@ public:
     moneda * monedas;
     pared * portal1 ;
     bool take = false;
-    bool finish = false;
 
     QList<pared*>paredaux = mund2->mundo2();
     bool getSalir() const;

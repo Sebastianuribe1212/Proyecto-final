@@ -313,6 +313,36 @@ debug/moc_admin_partidas.cpp: ../Paradox_2020_widget_v2/admin_partidas.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/QTimer \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qtimer.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qbasictimer.h \
+		../Paradox_2020_widget_v2/launcher.h \
+		../Paradox_2020_widget_v2/juego.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QGraphicsScene \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qgraphicsscene.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtGui/qpen.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QGraphicsView \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qgraphicsview.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtGui/qpainter.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtextoption.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qscrollarea.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qabstractscrollarea.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qframe.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QGraphicsItem \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qgraphicsitem.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtGui/qpainterpath.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtGui/QKeyEvent \
+		C:/Qt/5.15.0/mingw81_64/include/QtCore/QList \
+		../Paradox_2020_widget_v2/enemy1.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtCore/QObject \
+		C:/Qt/5.15.0/mingw81_64/include/QtGui/QPainter \
+		C:/Qt/5.15.0/mingw81_64/include/QtGui/QPixmap \
+		../Paradox_2020_widget_v2/pared.h \
+		../Paradox_2020_widget_v2/cuerpo.h \
+		../Paradox_2020_widget_v2/moneda.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QGraphicsPixmapItem \
+		../Paradox_2020_widget_v2/juego2.h \
+		../Paradox_2020_widget_v2/enemy2.h \
+		../Paradox_2020_widget_v2/juego3.h \
+		../Paradox_2020_widget_v2/enemy3.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtCore/QDebug \
 		debug/moc_predefs.h \
 		C:/Qt/5.15.0/mingw81_64/bin/moc.exe
 	C:\Qt\5.15.0\mingw81_64\bin\moc.exe $(DEFINES) --include "U:/Semestre 2/Info 2/Paradox 20-20/Proyecto final/build-Paradox_2020_widget_v2-Desktop_Qt_5_15_0_MinGW_64_bit-Debug/debug/moc_predefs.h" -IC:/Qt/5.15.0/mingw81_64/mkspecs/win32-g++ -I"U:/Semestre 2/Info 2/Paradox 20-20/Proyecto final/Paradox_2020_widget_v2" -IC:/Qt/5.15.0/mingw81_64/include -IC:/Qt/5.15.0/mingw81_64/include/QtWidgets -IC:/Qt/5.15.0/mingw81_64/include/QtGui -IC:/Qt/5.15.0/mingw81_64/include/QtANGLE -IC:/Qt/5.15.0/mingw81_64/include/QtSql -IC:/Qt/5.15.0/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\Paradox_2020_widget_v2\admin_partidas.h -o debug\moc_admin_partidas.cpp
@@ -1917,6 +1947,36 @@ debug/admin_partidas.o: ../Paradox_2020_widget_v2/admin_partidas.cpp ../Paradox_
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/QTimer \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qtimer.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qbasictimer.h \
+		../Paradox_2020_widget_v2/launcher.h \
+		../Paradox_2020_widget_v2/juego.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QGraphicsScene \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qgraphicsscene.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtGui/qpen.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QGraphicsView \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qgraphicsview.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtGui/qpainter.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtextoption.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qscrollarea.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qabstractscrollarea.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qframe.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QGraphicsItem \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qgraphicsitem.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtGui/qpainterpath.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtGui/QKeyEvent \
+		C:/Qt/5.15.0/mingw81_64/include/QtCore/QList \
+		../Paradox_2020_widget_v2/enemy1.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtCore/QObject \
+		C:/Qt/5.15.0/mingw81_64/include/QtGui/QPainter \
+		C:/Qt/5.15.0/mingw81_64/include/QtGui/QPixmap \
+		../Paradox_2020_widget_v2/pared.h \
+		../Paradox_2020_widget_v2/cuerpo.h \
+		../Paradox_2020_widget_v2/moneda.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QGraphicsPixmapItem \
+		../Paradox_2020_widget_v2/juego2.h \
+		../Paradox_2020_widget_v2/enemy2.h \
+		../Paradox_2020_widget_v2/juego3.h \
+		../Paradox_2020_widget_v2/enemy3.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtCore/QDebug \
 		ui_admin_partidas.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\admin_partidas.o ..\Paradox_2020_widget_v2\admin_partidas.cpp
 
@@ -2601,7 +2661,10 @@ debug/juego.o: ../Paradox_2020_widget_v2/juego.cpp ../Paradox_2020_widget_v2/jue
 		../Paradox_2020_widget_v2/pared.h \
 		../Paradox_2020_widget_v2/cuerpo.h \
 		../Paradox_2020_widget_v2/moneda.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QGraphicsPixmapItem
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QGraphicsPixmapItem \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QMessageBox \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qmessagebox.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qdialog.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\juego.o ..\Paradox_2020_widget_v2\juego.cpp
 
 debug/juego2.o: ../Paradox_2020_widget_v2/juego2.cpp ../Paradox_2020_widget_v2/juego2.h \
@@ -3013,7 +3076,11 @@ debug/launcher.o: ../Paradox_2020_widget_v2/launcher.cpp ../Paradox_2020_widget_
 		C:/Qt/5.15.0/mingw81_64/include/QtSql/qsqlerror.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtSql/QSqlQuery \
 		../Paradox_2020_widget_v2/login.h \
-		../Paradox_2020_widget_v2/registro.h
+		../Paradox_2020_widget_v2/registro.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtCore/QDebug \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QMessageBox \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qmessagebox.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qdialog.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\launcher.o ..\Paradox_2020_widget_v2\launcher.cpp
 
 debug/login.o: ../Paradox_2020_widget_v2/login.cpp ../Paradox_2020_widget_v2/login.h \
@@ -3288,7 +3355,8 @@ debug/main.o: ../Paradox_2020_widget_v2/main.cpp C:/Qt/5.15.0/mingw81_64/include
 		C:/Qt/5.15.0/mingw81_64/include/QtSql/QSqlQuery \
 		../Paradox_2020_widget_v2/login.h \
 		../Paradox_2020_widget_v2/registro.h \
-		../Paradox_2020_widget_v2/admin_partidas.h
+		../Paradox_2020_widget_v2/admin_partidas.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\main.o ..\Paradox_2020_widget_v2\main.cpp
 
 debug/moneda.o: ../Paradox_2020_widget_v2/moneda.cpp ../Paradox_2020_widget_v2/moneda.h \

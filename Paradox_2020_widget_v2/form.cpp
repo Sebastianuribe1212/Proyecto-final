@@ -6,18 +6,6 @@ Form::Form(QWidget *parent) :
     ui(new Ui::Form)
 {
     ui->setupUi(this);
-    QString nombre;
-    nombre = "BasDeDatos.sqlite";
-    dbmain=QSqlDatabase::addDatabase("QSQLITE");
-    dbmain.setDatabaseName(nombre);
-    if(dbmain.open())
-    {
-        qDebug()<<"Base de datos creada";
-    }
-    else
-    {
-        qDebug()<<"Error";
-    }
 
     timer = new QTimer;
     timer->start(80);
@@ -53,15 +41,6 @@ void Form::on_boton1_clicked()
     login->show();
 }
 
-QSqlDatabase Form::getDbmain() const
-{
-    return dbmain;
-}
-
-void Form::setDbmain(const QSqlDatabase &value)
-{
-    dbmain = value;
-}
 
 bool Form::getSalir() const
 {

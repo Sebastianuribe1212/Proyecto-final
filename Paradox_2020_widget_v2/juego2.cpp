@@ -1,5 +1,5 @@
 #include "juego2.h"
-
+#include <QMessageBox>
 juego2 :: juego2(QWidget * parent)
 {
     //Creacion y set de la escena
@@ -23,7 +23,7 @@ juego2 :: juego2(QWidget * parent)
     portal1 = new pared(50,50,-740,-30);
     scene->addItem(portal1);
 
-
+    QMessageBox::information(this,tr("Inicia el juego"),tr("PRESIONA LA TECLA TAB O DALE CLICK SOBRE EL PERSONAJE"));
 
     //Creacion de paredes del mundo
 
@@ -47,9 +47,7 @@ juego2 :: juego2(QWidget * parent)
 
     show();
 
-    if(finish == true){
-        setSalir(true);
-    }
+
 }
 
 void juego2::Actualizacion()
@@ -76,7 +74,7 @@ void juego2::portal()
 {
     if(portal1->collidesWithItem(personaje) && take == true )
       {
-        finish = true;
+        setSalir(true);
         scene->removeItem(personaje);
         delete personaje;
         for(int i = 0 ; i <paredaux.size(); i++){
