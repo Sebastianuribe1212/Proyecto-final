@@ -5,6 +5,9 @@
   <property name="windowModality">
    <enum>Qt::WindowModal</enum>
   </property>
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -13,11 +16,31 @@
     <height>342</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>328</width>
+    <height>342</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>328</width>
+    <height>342</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Cyberway Riders</family>
+   </font>
+  </property>
   <property name="focusPolicy">
    <enum>Qt::NoFocus</enum>
   </property>
   <property name="windowTitle">
    <string>Form</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
   </property>
   <widget class="QPushButton" name="pushButton_5">
    <property name="geometry">

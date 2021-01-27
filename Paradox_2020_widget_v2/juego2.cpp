@@ -20,7 +20,7 @@ juego2 :: juego2(QWidget * parent)
     setScene(scene);
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-
+    setBackgroundBrush(QBrush(QImage(":/Mundo2-100.jpg")));
     setFixedSize(800,600);
 
     //creacion y set de personaje

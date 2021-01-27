@@ -16,6 +16,7 @@ juego :: juego(QWidget * parent)
 {
 
     //Creacion y set de la escena
+    setBackgroundBrush(QBrush(QImage(":/Mundo1.jpg")));
     scene = new QGraphicsScene();
     scene->setSceneRect(0,0,800,600);
     setScene(scene);

@@ -186,9 +186,12 @@ compiler_rcc_clean:
 	-$(DEL_FILE) release\qrc_imagenes.cpp
 release/qrc_imagenes.cpp: ../Paradox_2020_widget_v2/Images/imagenes.qrc \
 		C:/Qt/5.15.0/mingw81_64/bin/rcc.exe \
+		../Paradox_2020_widget_v2/Images/coronavirus.png \
 		../Paradox_2020_widget_v2/Images/2833278.png \
 		../Paradox_2020_widget_v2/Images/Mesa\ de\ trabajo\ 1.png \
 		../Paradox_2020_widget_v2/Images/abeja.png \
+		../Paradox_2020_widget_v2/Images/Mundo1.jpg \
+		../Paradox_2020_widget_v2/Images/Mundo2-100.jpg \
 		../Paradox_2020_widget_v2/Images/Slimeball_JE2_BE2.png
 	C:\Qt\5.15.0\mingw81_64\bin\rcc.exe -name imagenes ..\Paradox_2020_widget_v2\Images\imagenes.qrc -o release\qrc_imagenes.cpp
 
@@ -348,6 +351,7 @@ release/moc_admin_partidas.cpp: ../Paradox_2020_widget_v2/admin_partidas.h \
 		../Paradox_2020_widget_v2/enemy2.h \
 		../Paradox_2020_widget_v2/juego3.h \
 		../Paradox_2020_widget_v2/enemy3.h \
+		../Paradox_2020_widget_v2/launcher_multijugador.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/QDebug \
 		release/moc_predefs.h \
 		C:/Qt/5.15.0/mingw81_64/bin/moc.exe
@@ -2132,6 +2136,7 @@ release/admin_partidas.o: ../Paradox_2020_widget_v2/admin_partidas.cpp ../Parado
 		../Paradox_2020_widget_v2/enemy2.h \
 		../Paradox_2020_widget_v2/juego3.h \
 		../Paradox_2020_widget_v2/enemy3.h \
+		../Paradox_2020_widget_v2/launcher_multijugador.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/QDebug \
 		ui_admin_partidas.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/QVariant \
@@ -3735,6 +3740,7 @@ release/main.o: ../Paradox_2020_widget_v2/main.cpp C:/Qt/5.15.0/mingw81_64/inclu
 		../Paradox_2020_widget_v2/login.h \
 		../Paradox_2020_widget_v2/registro.h \
 		../Paradox_2020_widget_v2/admin_partidas.h \
+		../Paradox_2020_widget_v2/launcher_multijugador.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main.o ..\Paradox_2020_widget_v2\main.cpp
 

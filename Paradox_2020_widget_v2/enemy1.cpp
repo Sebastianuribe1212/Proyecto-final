@@ -5,8 +5,8 @@
 enemy1::enemy1(QObject *parent): QObject(parent)
 {
     pixmap = new QPixmap(":/Slimeball_JE2_BE2.png");
-    ancho = 150;
-    alto = 150;
+    ancho = 200;
+    alto = 200;
     posx=100;
     posy=80;
     setScale(0.25);

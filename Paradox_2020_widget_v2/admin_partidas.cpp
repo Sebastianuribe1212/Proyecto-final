@@ -11,6 +11,8 @@ Admin_partidas::Admin_partidas(QWidget *parent) :
 
     ui->setupUi(this);
 
+
+
     setWindowTitle("█ »»Paradox 20-20«« █");
     QString nombre;
     nombre = "BasDeDatos.sqlite";

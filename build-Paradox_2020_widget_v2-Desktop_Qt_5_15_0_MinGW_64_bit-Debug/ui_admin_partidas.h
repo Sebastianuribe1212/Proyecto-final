@@ -48,22 +48,29 @@ public:
         if (Admin_partidas->objectName().isEmpty())
             Admin_partidas->setObjectName(QString::fromUtf8("Admin_partidas"));
         Admin_partidas->setWindowModality(Qt::WindowModal);
+        Admin_partidas->setEnabled(true);
         Admin_partidas->resize(328, 342);
+        Admin_partidas->setMinimumSize(QSize(328, 342));
+        Admin_partidas->setMaximumSize(QSize(328, 342));
+        QFont font;
+        font.setFamily(QString::fromUtf8("Cyberway Riders"));
+        Admin_partidas->setFont(font);
         Admin_partidas->setFocusPolicy(Qt::NoFocus);
+        Admin_partidas->setAutoFillBackground(false);
         pushButton_5 = new QPushButton(Admin_partidas);
         pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
         pushButton_5->setGeometry(QRect(120, 240, 80, 21));
-        QFont font;
-        font.setFamily(QString::fromUtf8("Modern"));
-        pushButton_5->setFont(font);
+        QFont font1;
+        font1.setFamily(QString::fromUtf8("Modern"));
+        pushButton_5->setFont(font1);
         user = new QPushButton(Admin_partidas);
         user->setObjectName(QString::fromUtf8("user"));
         user->setGeometry(QRect(90, 30, 147, 41));
-        QFont font1;
-        font1.setFamily(QString::fromUtf8("Modern"));
-        font1.setBold(false);
-        font1.setWeight(50);
-        user->setFont(font1);
+        QFont font2;
+        font2.setFamily(QString::fromUtf8("Modern"));
+        font2.setBold(false);
+        font2.setWeight(50);
+        user->setFont(font2);
         layoutWidget = new QWidget(Admin_partidas);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
         layoutWidget->setGeometry(QRect(120, 90, 88, 137));
@@ -74,26 +81,26 @@ public:
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         Cargarpartida = new QPushButton(layoutWidget);
         Cargarpartida->setObjectName(QString::fromUtf8("Cargarpartida"));
-        Cargarpartida->setFont(font);
+        Cargarpartida->setFont(font1);
         Cargarpartida->setFocusPolicy(Qt::NoFocus);
 
         verticalLayout->addWidget(Cargarpartida);
 
         nuevapartida = new QPushButton(layoutWidget);
         nuevapartida->setObjectName(QString::fromUtf8("nuevapartida"));
-        nuevapartida->setFont(font);
+        nuevapartida->setFont(font1);
 
         verticalLayout->addWidget(nuevapartida);
 
         eliminarpartida = new QPushButton(layoutWidget);
         eliminarpartida->setObjectName(QString::fromUtf8("eliminarpartida"));
-        eliminarpartida->setFont(font);
+        eliminarpartida->setFont(font1);
 
         verticalLayout->addWidget(eliminarpartida);
 
         reiniciarpartida = new QPushButton(layoutWidget);
         reiniciarpartida->setObjectName(QString::fromUtf8("reiniciarpartida"));
-        reiniciarpartida->setFont(font);
+        reiniciarpartida->setFont(font1);
 
         verticalLayout->addWidget(reiniciarpartida);
 
@@ -102,14 +109,14 @@ public:
 
         Guardar = new QPushButton(layoutWidget);
         Guardar->setObjectName(QString::fromUtf8("Guardar"));
-        Guardar->setFont(font);
+        Guardar->setFont(font1);
 
         verticalLayout_2->addWidget(Guardar);
 
         label = new QLabel(Admin_partidas);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(20, 290, 81, 16));
-        label->setFont(font);
+        label->setFont(font1);
         line = new QFrame(Admin_partidas);
         line->setObjectName(QString::fromUtf8("line"));
         line->setGeometry(QRect(60, 70, 201, 16));
@@ -133,19 +140,19 @@ public:
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
         pushButton = new QPushButton(layoutWidget1);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setFont(font);
+        pushButton->setFont(font1);
 
         horizontalLayout->addWidget(pushButton);
 
         normal = new QPushButton(layoutWidget1);
         normal->setObjectName(QString::fromUtf8("normal"));
-        normal->setFont(font);
+        normal->setFont(font1);
 
         horizontalLayout->addWidget(normal);
 
         dificil = new QPushButton(layoutWidget1);
         dificil->setObjectName(QString::fromUtf8("dificil"));
-        dificil->setFont(font);
+        dificil->setFont(font1);
 
         horizontalLayout->addWidget(dificil);
 
