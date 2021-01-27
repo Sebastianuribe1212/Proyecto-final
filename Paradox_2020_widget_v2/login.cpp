@@ -1,3 +1,4 @@
+//Funciona para poner el usuario y la contraseña para cargar la partida que tenias guardada
 #include "login.h"
 #include "ui_login.h"
 #include <QDebug>
@@ -7,6 +8,7 @@ Login::Login(QWidget *parent) :
     ui(new Ui::Login)
 {
     ui->setupUi(this);
+    setWindowTitle("█ »»Login«« █");
 }
 
 Login::~Login()

@@ -1,3 +1,4 @@
+//main que lanza todo
 #include <QApplication>
 #include "launcher.h"
 #include "admin_partidas.h"

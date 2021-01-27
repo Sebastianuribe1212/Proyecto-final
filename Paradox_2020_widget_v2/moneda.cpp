@@ -1,4 +1,4 @@
-
+//me devuelve la creacion de una "moneda" (un objeto que vamos a recoger)
 #include "moneda.h"
 
 moneda::moneda()

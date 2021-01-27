@@ -19,6 +19,7 @@ SOURCES += \
     juego2.cpp \
     juego3.cpp \
     launcher.cpp \
+    launcher_multijugador.cpp \
     login.cpp \
     main.cpp \
     moneda.cpp \
@@ -36,6 +37,7 @@ HEADERS += \
     juego2.h \
     juego3.h \
     launcher.h \
+    launcher_multijugador.h \
     login.h \
     moneda.h \
     pared.h \

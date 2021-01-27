@@ -8,6 +8,9 @@
 #include "QtSql/qsqlquery.h"
 #include "QtSql/QSqlError"
 #include "QtSql/QSqlQuery"
+#include "launcher_multijugador.h"
+#include <QGraphicsScene>
+#include <QGraphicsView>
 #include <QTimer>
 #include <QDebug>
 
@@ -25,6 +28,7 @@ public:
     QTimer *timer;
 
     launcher * juego;
+    Launcher_multijugador * juegoMulti;
     Form * w = new Form(0);
 
     QString getUser() const;
@@ -36,19 +40,41 @@ public:
     QSqlDatabase getDbmain() const;
     void setDbmain(const QSqlDatabase &value);
 
+    int getDificultad() const;
+    void setDificultad(int value);
+
 private slots:
 
     void Actualizacion1();
+
     void on_user_clicked();
+
     void on_Cargarpartida_clicked();
 
     void on_Guardar_clicked();
+
+    void on_nuevapartida_clicked();
+
+    void on_eliminarpartida_clicked();
+
+    void on_reiniciarpartida_clicked();
+
+    void on_pushButton_clicked();
+
+    void on_normal_clicked();
+
+    void on_dificil_clicked();
+
+    void on_pushButton_5_clicked();
+
+    void Actualizacion_salir();
 
 private:
     Ui::Admin_partidas *ui;
     QSqlDatabase dbmain;
     QString mundo;
     QString user;
+    int dificultad;
 };
 
 #endif // ADMIN_PARTIDAS_H

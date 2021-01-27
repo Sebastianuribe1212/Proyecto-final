@@ -56,6 +56,9 @@ public:
     void setPared(QList<pared*>lista);
 
 
+    int getVelocidad() const;
+    void setVelocidad(int value);
+
 signals:
 public slots:
     void Actualizacion();

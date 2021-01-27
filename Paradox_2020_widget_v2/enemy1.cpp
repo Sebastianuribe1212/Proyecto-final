@@ -1,3 +1,4 @@
+//Enemigo del mundo 1 (son bolas que rebotan en la pared), el jugador al tocarlo muere y se reinica la partida
 #include "enemy1.h"
 
 

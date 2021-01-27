@@ -9,9 +9,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
+    <width>371</width>
     <height>300</height>
    </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>8</pointsize>
+   </font>
   </property>
   <property name="windowTitle">
    <string>Form</string>
@@ -19,11 +24,17 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>30</y>
+     <x>90</x>
+     <y>80</y>
      <width>47</width>
      <height>13</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Modern</family>
+     <pointsize>8</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>Usuario</string>
@@ -32,11 +43,17 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>80</y>
+     <x>90</x>
+     <y>130</y>
      <width>61</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Modern</family>
+     <pointsize>8</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>contraseña</string>
@@ -45,11 +62,17 @@
   <widget class="QCommandLinkButton" name="entrar">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>140</y>
-     <width>168</width>
-     <height>41</height>
+     <x>190</x>
+     <y>190</y>
+     <width>71</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Modern</family>
+     <pointsize>10</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>Entrar</string>
@@ -58,19 +81,25 @@
   <widget class="QLineEdit" name="nom">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>50</y>
-     <width>113</width>
+     <x>90</x>
+     <y>100</y>
+     <width>181</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Modern</family>
+     <pointsize>8</pointsize>
+    </font>
    </property>
   </widget>
   <widget class="QLineEdit" name="password">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>100</y>
-     <width>113</width>
+     <x>90</x>
+     <y>150</y>
+     <width>181</width>
      <height>21</height>
     </rect>
    </property>
@@ -79,6 +108,63 @@
    </property>
    <property name="echoMode">
     <enum>QLineEdit::Password</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>40</y>
+     <width>47</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Modern</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Estas en </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>40</y>
+     <width>81</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Cyberway Riders</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Paradox 20-20</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>40</y>
+     <width>101</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Modern</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>por favor logueate</string>
    </property>
   </widget>
  </widget>

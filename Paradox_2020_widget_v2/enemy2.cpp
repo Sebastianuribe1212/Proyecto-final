@@ -1,3 +1,4 @@
+//Enemigo del mundo 2 (Es una abeja que sigue al jugador), el jugador al tocarlo muere y se reinica la partida
 #include "enemy2.h"
 
 

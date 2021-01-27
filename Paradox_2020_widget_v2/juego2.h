@@ -18,6 +18,7 @@ class juego2: public QGraphicsView
     Q_OBJECT
 private:
     bool salir = false;
+    int dificultad = 2;
 public:
     juego2(QWidget * parent = 0);
 
@@ -39,9 +40,14 @@ public:
     bool getSalir() const;
     void setSalir(bool value);
 
+    int getDificultad() const;
+    void setDificultad(int value);
+
 public slots:
     void Actualizacion();
     void portal();
     void enemy1();
+    void Dificultad();
+    void Paredes();
 };
 #endif // JUEGO2_H

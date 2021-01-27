@@ -1,5 +1,17 @@
+//mapa 2 con personaje, setea las paredes, la moneda, el portal, y el personaje (mapa ambientado en Australia)
 #include "juego2.h"
 #include <QMessageBox>
+#include <QDebug>
+int juego2::getDificultad() const
+{
+    return dificultad;
+}
+
+void juego2::setDificultad(int value)
+{
+    dificultad = value;
+}
+
 juego2 :: juego2(QWidget * parent)
 {
     //Creacion y set de la escena
@@ -19,7 +31,7 @@ juego2 :: juego2(QWidget * parent)
     personaje->setFlag(QGraphicsItem::ItemIsFocusable);
     personaje->setFocus();
     scene->addItem(personaje);
-
+    setWindowTitle("█ »»04/01/202Ó Austrlýa«« █");
     portal1 = new pared(50,50,-740,-30);
     scene->addItem(portal1);
 
@@ -40,9 +52,10 @@ juego2 :: juego2(QWidget * parent)
     scene->addItem(monedas);
     time = new QTimer;
     time->start(80);
-
+     connect(time, SIGNAL(timeout()), this,SLOT(Paredes()));
     connect(time, SIGNAL(timeout()), this,SLOT(Actualizacion()));
     connect(time, SIGNAL(timeout()), this,SLOT(portal()));
+
 
 
     show();
@@ -72,6 +85,7 @@ void juego2::Actualizacion()
 
 void juego2::portal()
 {
+
     if(portal1->collidesWithItem(personaje) && take == true )
       {
         setSalir(true);
@@ -151,6 +165,43 @@ void juego2::enemy1()
                        enemigo1->down();
                     }
                 }
+    }
+}
+
+void juego2::Dificultad()
+{
+    int aux =8-(this->getDificultad()) ;
+    personaje->setVelocidad(aux);
+}
+
+void juego2::Paredes()
+{
+    QList<pared*>paredaux = mund2->mundo2();
+    qDebug()<<"Entra a paredes";
+    for(int i = 0 ; i <paredaux.size(); i++){
+        if(paredaux.at(i)->collidesWithItem(personaje)){
+                if(take == true){
+                    take = false;
+                    monedas = new moneda();
+                    monedas->setPos(20,80);
+                    scene->addItem(monedas);
+                    connect(time, SIGNAL(timeout()), this,SLOT(Actualizacion()));
+                    scene->removeItem(enemigo1);
+                    enemigo1->posx = 100;
+                    enemigo1 ->posy = 80;
+                    enemigo1->setPos(100,80);
+
+
+                    disconnect(time, SIGNAL(timeout()), this,SLOT(enemy1()));
+
+                }
+                qDebug()<<"Entra a collides";
+                personaje->posx=750;
+                personaje->posy=50;
+                personaje->setPos(750,50);
+
+
+        }
     }
 }
 bool juego2::getSalir() const

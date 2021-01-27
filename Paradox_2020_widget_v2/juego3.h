@@ -21,6 +21,7 @@ class juego3: public QGraphicsView
 private:
     bool salir = false;
     int t = 0;
+    int dificultad = 1;
 public:
     juego3(QWidget * parent = 0);
 
@@ -43,10 +44,15 @@ public:
     bool getSalir() const;
     void setSalir(bool value);
 
+    int getDificultad() const;
+    void setDificultad(int value);
+
 public slots:
     void Actualizacion();
     void portal();
     void enemy1();
+    void Dificultad();
+
 };
 
 #endif // JUEGO3_H

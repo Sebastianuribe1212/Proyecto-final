@@ -1,5 +1,16 @@
+//tiene las funciones del personaje, moverse segun la tecla, o poner el pixmap del jugador
 #include "cuerpo.h"
 
+
+int cuerpo::getVelocidad() const
+{
+    return velocidad;
+}
+
+void cuerpo::setVelocidad(int value)
+{
+    velocidad = value;
+}
 
 cuerpo::cuerpo(QObject *parent): QObject(parent)
 {

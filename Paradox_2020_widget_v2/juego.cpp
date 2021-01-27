@@ -1,7 +1,20 @@
+//mapa 1 con personaje, setea las paredes, la moneda, el portal, y el personaje (mapa ambientado en las calles)
 #include "juego.h"
 #include <QMessageBox>
+#include <QDebug>
+int juego::getDificultad() const
+{
+    return dificultad;
+}
+
+void juego::setDificultad(int value)
+{
+    dificultad = value;
+}
+
 juego :: juego(QWidget * parent)
 {
+
     //Creacion y set de la escena
     scene = new QGraphicsScene();
     scene->setSceneRect(0,0,800,600);
@@ -9,7 +22,7 @@ juego :: juego(QWidget * parent)
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setFixedSize(800,600);
-
+    setWindowTitle("█ »»CAlles de PÃndemia«« █");
     //creacion y set de personaje
     personaje = new cuerpo();
     personaje->setPos(400,550);
@@ -33,10 +46,11 @@ juego :: juego(QWidget * parent)
 
     enemigo1->setPos(100,80);
 
-    enemigo2->setDireccion(false);
-    enemigo2->posx = 700;
-    enemigo2->posy = 500;
-    enemigo2->setPos(700,500);
+        enemigo2->setDireccion(false);
+        enemigo2->posx = 700;
+        enemigo2->posy = 500;
+        enemigo2->setPos(700,500);
+
 
     scene->addItem(enemigo1);
     scene->addItem(enemigo2);
@@ -49,6 +63,7 @@ juego :: juego(QWidget * parent)
     connect(time, SIGNAL(timeout()), this,SLOT(portal()));
     connect(time, SIGNAL(timeout()), this,SLOT(MoveEnemy()));
     connect(time, SIGNAL(timeout()), this,SLOT(MoveEnemy2()));
+    connect(time, SIGNAL(timeout()), this,SLOT(Dificultad()));
 
     show();
 
@@ -174,7 +189,17 @@ void juego::MoveEnemy2()
           }
     if(enemigo2->collidesWithItem(paredaux.at(3))){
              enemigo2->setDireccion(false);
-          }
+    }
+}
+
+void juego::Dificultad()
+{
+    int aux = this->getDificultad()*3;
+    enemigo2->setVelocidad(aux);
+    enemigo1->setVelocidad(aux);
+
+    qDebug()<<"dificultad en juego"<<enemigo1->getVelocidad();
+    qDebug()<<"dificultad en juego"<<enemigo2->getVelocidad();
 }
 
 bool juego::getSalir() const

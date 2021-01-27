@@ -1,3 +1,4 @@
+//Me muestra las opciones registrarse o loguearse
 #include "form.h"
 #include "ui_form.h"
 #include <QDebug>
@@ -6,7 +7,7 @@ Form::Form(QWidget *parent) :
     ui(new Ui::Form)
 {
     ui->setupUi(this);
-
+    setWindowTitle("█ »»2020«« █");
     timer = new QTimer;
     timer->start(80);
     connect(timer,SIGNAL(timeout()), this,SLOT(Actualizacion()));

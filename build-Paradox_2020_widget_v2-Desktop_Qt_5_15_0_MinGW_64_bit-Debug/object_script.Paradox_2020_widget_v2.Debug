@@ -8,6 +8,7 @@ debug/juego.o
 debug/juego2.o
 debug/juego3.o
 debug/launcher.o
+debug/launcher_multijugador.o
 debug/login.o
 debug/main.o
 debug/moneda.o
@@ -24,6 +25,7 @@ debug/moc_juego.o
 debug/moc_juego2.o
 debug/moc_juego3.o
 debug/moc_launcher.o
+debug/moc_launcher_multijugador.o
 debug/moc_login.o
 debug/moc_moneda.o
 debug/moc_registro.o

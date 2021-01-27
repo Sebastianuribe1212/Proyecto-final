@@ -1,4 +1,4 @@
-
+//crea paredes, tiene  funciones por cada mapa que devuelve la posición y el tamaño de ellas.
 #include "pared.h"
 
 

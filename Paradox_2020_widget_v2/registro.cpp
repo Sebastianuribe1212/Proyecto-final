@@ -1,3 +1,4 @@
+//despliega ventana registro, guarda el usuario y la contraseña ingresado al darle enviar
 #include "registro.h"
 #include "ui_registro.h"
 #include "QDebug"
@@ -7,6 +8,7 @@ Registro::Registro(QWidget *parent) :
     ui(new Ui::Registro)
 {
     ui->setupUi(this);
+    setWindowTitle("█ »»Registro«« █");
     CrearTabla();
 }
 

@@ -11,7 +11,7 @@
 
 
 
-class launcher: public QObject
+class launcher: public QGraphicsView
 {
     Q_OBJECT
 public:
@@ -28,6 +28,9 @@ public:
     void setSalir(bool value);
 
 
+    int getDificultad() const;
+    void setDificultad(int value);
+
 public slots:
     void Actualizacion1();
     void Actualizacion2();
@@ -36,6 +39,7 @@ public slots:
 private:
     QString mundo;
     bool salir = false;
+    int dificultad = 1;
 };
 
 #endif // LAUNCHER_H

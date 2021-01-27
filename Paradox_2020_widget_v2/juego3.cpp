@@ -1,5 +1,16 @@
+//mapa 3 con personaje, setea las paredes, la moneda, el portal, y el personaje (mapa ambientado en china)
 #include "juego3.h"
 #include <QMessageBox>
+int juego3::getDificultad() const
+{
+    return dificultad;
+}
+
+void juego3::setDificultad(int value)
+{
+    dificultad = value;
+}
+
 juego3 :: juego3(QWidget * parent)
 {
     //Creacion y set de la escena
@@ -8,7 +19,7 @@ juego3 :: juego3(QWidget * parent)
     setScene(scene);
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-
+    setWindowTitle("█ »»0/Ø/0 ChïnÃ«« █");
     setFixedSize(800,600);
 
     //creacion y set de personaje
@@ -52,9 +63,7 @@ juego3 :: juego3(QWidget * parent)
 
     show();
 
-    if(finish == true){
-        setSalir(true);
-    }
+
 }
 
 void juego3::Actualizacion()
@@ -74,7 +83,7 @@ void juego3::portal()
 {
     if(portal1->collidesWithItem(personaje) && take == true )
       {
-        finish = true;
+        this->setSalir(true);
         scene->removeItem(personaje);
         delete personaje;
         for(int i = 0 ; i <paredaux.size(); i++){
@@ -86,7 +95,7 @@ void juego3::portal()
         scene->removeItem(enemigo1);
         delete enemigo1;
 
-        QMessageBox::information(this,tr("GANASTEEEE"),tr("ACABASTE TODAS TUS MISIONES!!!"));
+
         disconnect(time, SIGNAL(timeout()), this,SLOT(enemy1()));
         disconnect(time, SIGNAL(timeout()), this,SLOT(portal()));
 
@@ -95,7 +104,7 @@ void juego3::portal()
 
 void juego3::enemy1()
 {
-    int centrox = 390, centroy = 280, r1 = 50, x , y;
+    int centrox = 390, centroy = 280, x , y;
 
     if(personaje->collidesWithItem(enemigo1) )
       {
@@ -120,11 +129,7 @@ void juego3::enemy1()
 
     t += 20;
 
-    /*if(t > 360){
-        t=0;
-    }
-*/
-    x = centrox + 200  * cos(t*0.01);
+  x = centrox + 200  * cos(t*0.01);
     y = centroy + 200 * sin(t*0.01);
 
     enemigo1->posx =x;
@@ -133,6 +138,14 @@ void juego3::enemy1()
 
 
 }
+
+void juego3::Dificultad()
+{
+    int aux =8-(this->getDificultad()) ;
+    personaje->setVelocidad(aux);
+}
+
+
 bool juego3::getSalir() const
 {
     return salir;

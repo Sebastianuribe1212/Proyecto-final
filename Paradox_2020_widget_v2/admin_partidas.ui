@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>207</width>
+    <width>328</width>
     <height>342</height>
    </rect>
   </property>
@@ -22,11 +22,16 @@
   <widget class="QPushButton" name="pushButton_5">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>270</y>
+     <x>120</x>
+     <y>240</y>
      <width>80</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Modern</family>
+    </font>
    </property>
    <property name="text">
     <string>Multijugador</string>
@@ -35,23 +40,30 @@
   <widget class="QPushButton" name="user">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>90</x>
      <y>30</y>
      <width>147</width>
      <height>41</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Modern</family>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
    <property name="text">
-    <string>Click para ingresar tu usuario</string>
+    <string>Click Para ingresar tu usuario</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>60</x>
+     <x>120</x>
      <y>90</y>
-     <width>86</width>
-     <height>133</height>
+     <width>88</width>
+     <height>137</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -59,6 +71,11 @@
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
        <widget class="QPushButton" name="Cargarpartida">
+        <property name="font">
+         <font>
+          <family>Modern</family>
+         </font>
+        </property>
         <property name="focusPolicy">
          <enum>Qt::NoFocus</enum>
         </property>
@@ -69,6 +86,11 @@
       </item>
       <item>
        <widget class="QPushButton" name="nuevapartida">
+        <property name="font">
+         <font>
+          <family>Modern</family>
+         </font>
+        </property>
         <property name="text">
          <string>Nueva partida</string>
         </property>
@@ -76,6 +98,11 @@
       </item>
       <item>
        <widget class="QPushButton" name="eliminarpartida">
+        <property name="font">
+         <font>
+          <family>Modern</family>
+         </font>
+        </property>
         <property name="text">
          <string>Eliminar partida</string>
         </property>
@@ -83,6 +110,11 @@
       </item>
       <item>
        <widget class="QPushButton" name="reiniciarpartida">
+        <property name="font">
+         <font>
+          <family>Modern</family>
+         </font>
+        </property>
         <property name="text">
          <string>Reiniciar</string>
         </property>
@@ -92,8 +124,118 @@
     </item>
     <item>
      <widget class="QPushButton" name="Guardar">
+      <property name="font">
+       <font>
+        <family>Modern</family>
+       </font>
+      </property>
       <property name="text">
        <string>Guardar partida</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>290</y>
+     <width>81</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Modern</family>
+    </font>
+   </property>
+   <property name="text">
+    <string>Dificultad:</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>70</y>
+     <width>201</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_2">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>220</y>
+     <width>201</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_3">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>260</y>
+     <width>201</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>310</y>
+     <width>254</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPushButton" name="pushButton">
+      <property name="font">
+       <font>
+        <family>Modern</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>Facil</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="normal">
+      <property name="font">
+       <font>
+        <family>Modern</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>Nomal</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="dificil">
+      <property name="font">
+       <font>
+        <family>Modern</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>Dificil</string>
       </property>
      </widget>
     </item>
