@@ -41,9 +41,9 @@ juego :: juego(QWidget * parent)
 
     personaje->setPared(paredaux);
 
-    for(int i = 0 ; i <paredaux.size(); i++){
+    /*for(int i = 0 ; i <paredaux.size(); i++){
        scene->addItem(paredaux.at(i));
-    }
+    }*/
 
     enemigo1->setPos(100,80);
 

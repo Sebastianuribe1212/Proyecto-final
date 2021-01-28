@@ -2,6 +2,7 @@
 #ifndef PARED_H
 #define PARED_H
 
+
 #include <QGraphicsItem>
 #include <QPainter>
 #include <QPainter>

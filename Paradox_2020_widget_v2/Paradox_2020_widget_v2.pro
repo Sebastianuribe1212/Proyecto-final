@@ -9,6 +9,7 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    about.cpp \
     admin_partidas.cpp \
     cuerpo.cpp \
     enemy1.cpp \
@@ -27,6 +28,7 @@ SOURCES += \
     registro.cpp
 
 HEADERS += \
+    about.h \
     admin_partidas.h \
     cuerpo.h \
     enemy1.h \
@@ -44,6 +46,7 @@ HEADERS += \
     registro.h
 
 FORMS += \
+    about.ui \
     admin_partidas.ui \
     form.ui \
     login.ui \

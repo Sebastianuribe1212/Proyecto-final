@@ -19,6 +19,7 @@ juego3 :: juego3(QWidget * parent)
     setScene(scene);
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    setBackgroundBrush(QBrush(QImage(":/Mundo3-100.jpg")));
     setWindowTitle("█ »»0/Ø/0 ChïnÃ«« █");
     setFixedSize(800,600);
 
@@ -40,9 +41,9 @@ juego3 :: juego3(QWidget * parent)
 
     personaje->setPared(paredaux);
 
-    for(int i = 0 ; i <paredaux.size(); i++){
+    /*for(int i = 0 ; i <paredaux.size(); i++){
        scene->addItem(paredaux.at(i));
-    }
+    }*/
 
     //enemigo1->posx =100;
     //enemigo1 ->posy = 10;

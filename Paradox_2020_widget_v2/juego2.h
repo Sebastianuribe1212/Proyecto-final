@@ -29,7 +29,7 @@ public:
 
     QTimer *abeja ;
 
-    pared * mund2;
+    pared * mund2 ;
 
     enemy2 * enemigo1 = new enemy2();
     moneda * monedas;

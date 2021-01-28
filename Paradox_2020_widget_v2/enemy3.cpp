@@ -4,12 +4,12 @@
 
 enemy3::enemy3(QObject *parent): QObject(parent)
 {
-    pixmap = new QPixmap(":/abeja.png");
-    ancho = 1920;
-    alto = 1846;
+    pixmap = new QPixmap(":/Murcielago.png");
+    ancho = 400;
+    alto = 400;
     posx=50;
     posy=80;
-    setScale(0.015);
+    setScale(0.15);
 
 }
 

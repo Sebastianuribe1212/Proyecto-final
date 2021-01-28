@@ -42,6 +42,10 @@
   <property name="autoFillBackground">
    <bool>false</bool>
   </property>
+  <property name="styleSheet">
+   <string notr="true">alternate-background-color: rgb(38, 38, 38);
+background-color: rgb(42, 42, 42);</string>
+  </property>
   <widget class="QPushButton" name="pushButton_5">
    <property name="geometry">
     <rect>
@@ -54,7 +58,12 @@
    <property name="font">
     <font>
      <family>Modern</family>
+     <pointsize>9</pointsize>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(17, 87, 152);
+color: rgb(170, 0, 127);</string>
    </property>
    <property name="text">
     <string>Multijugador</string>
@@ -72,9 +81,13 @@
    <property name="font">
     <font>
      <family>Modern</family>
+     <pointsize>9</pointsize>
      <weight>50</weight>
      <bold>false</bold>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Click Para ingresar tu usuario</string>
@@ -84,9 +97,9 @@
    <property name="geometry">
     <rect>
      <x>120</x>
-     <y>90</y>
+     <y>80</y>
      <width>88</width>
-     <height>137</height>
+     <height>143</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -102,6 +115,13 @@
         <property name="focusPolicy">
          <enum>Qt::NoFocus</enum>
         </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(170, 0, 127);
+color: rgb(255, 255, 255);
+color: rgb(255, 255, 255);
+color: rgb(255, 255, 255);
+color: rgb(207, 0, 103);</string>
+        </property>
         <property name="text">
          <string>Cargar partida</string>
         </property>
@@ -113,6 +133,10 @@
          <font>
           <family>Modern</family>
          </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(207, 0, 103);
+color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
          <string>Nueva partida</string>
@@ -126,6 +150,10 @@
           <family>Modern</family>
          </font>
         </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(207, 0, 103);
+color: rgb(255, 255, 255);</string>
+        </property>
         <property name="text">
          <string>Eliminar partida</string>
         </property>
@@ -137,6 +165,10 @@
          <font>
           <family>Modern</family>
          </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(207, 0, 103);
+color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
          <string>Reiniciar</string>
@@ -151,6 +183,10 @@
        <font>
         <family>Modern</family>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(207, 0, 103);
+color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Guardar partida</string>
@@ -172,6 +208,10 @@
     <font>
      <family>Modern</family>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(207, 0, 103);
+color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Dificultad:</string>
@@ -222,7 +262,7 @@
      <x>50</x>
      <y>310</y>
      <width>254</width>
-     <height>23</height>
+     <height>25</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
@@ -232,6 +272,12 @@
        <font>
         <family>Modern</family>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 170, 255);
+color: rgb(255, 255, 255);
+color: rgb(255, 255, 255);
+color: rgb(207, 0, 103);</string>
       </property>
       <property name="text">
        <string>Facil</string>
@@ -245,6 +291,10 @@
         <family>Modern</family>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(207, 0, 103);
+color: rgb(255, 255, 255);</string>
+      </property>
       <property name="text">
        <string>Nomal</string>
       </property>
@@ -257,12 +307,32 @@
         <family>Modern</family>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(170, 0, 0);
+color: rgb(255, 0, 0);</string>
+      </property>
       <property name="text">
        <string>Dificil</string>
       </property>
      </widget>
     </item>
    </layout>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>280</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>About</string>
+   </property>
   </widget>
  </widget>
  <resources/>

@@ -3,6 +3,7 @@
 
 #include "form.h"
 #include "launcher.h"
+#include "about.h"
 #include <QWidget>
 #include "QtSql/QSqlDatabase"
 #include "QtSql/qsqlquery.h"
@@ -30,6 +31,8 @@ public:
     launcher * juego;
     Launcher_multijugador * juegoMulti;
     Form * w = new Form(0);
+
+    About * D = new About(0);
 
     QString getUser() const;
     void setUser(const QString &value);
@@ -68,6 +71,8 @@ private slots:
     void on_pushButton_5_clicked();
 
     void Actualizacion_salir();
+
+    void on_pushButton_2_clicked();
 
 private:
     Ui::Admin_partidas *ui;

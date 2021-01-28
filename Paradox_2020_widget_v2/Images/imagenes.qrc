@@ -1,11 +1,15 @@
 <RCC>
     <qresource prefix="/">
-        <file alias="Mon_tapabocas">2833278.png</file>
         <file alias="Personaje">Mesa de trabajo 1.png</file>
         <file>Slimeball_JE2_BE2.png</file>
         <file>abeja.png</file>
         <file>coronavirus.png</file>
         <file>Mundo1.jpg</file>
         <file>Mundo2-100.jpg</file>
+        <file>Murcielago.png</file>
+        <file>Mundo3-100.jpg</file>
+        <file>Tapabocas-baratos.png</file>
+        <file>Captura de pantalla 2021-01-27 015813.jpg</file>
+        <file>Will-Smith-Fresh-Prince-Bel-Air-Promo.jpg</file>
     </qresource>
 </RCC>

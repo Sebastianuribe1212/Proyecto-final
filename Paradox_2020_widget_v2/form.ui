@@ -12,20 +12,23 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>252</width>
-    <height>357</height>
+    <width>249</width>
+    <height>365</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QWidget" name="">
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(34, 34, 34);</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>20</x>
      <y>60</y>
-     <width>201</width>
-     <height>221</height>
+     <width>211</width>
+     <height>201</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -35,6 +38,9 @@
        <font>
         <family>Modern</family>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Crear usuario</string>
@@ -47,6 +53,9 @@
        <font>
         <family>Modern</family>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Iniciar sesion</string>

@@ -41,9 +41,9 @@ juego2 :: juego2(QWidget * parent)
 
     personaje->setPared(paredaux);
 
-    for(int i = 0 ; i <paredaux.size(); i++){
+    /*for(int i = 0 ; i <paredaux.size(); i++){
        scene->addItem(paredaux.at(i));
-    }
+    }*/
 
 
     //actualizacion para tomar la moneda
@@ -176,10 +176,10 @@ void juego2::Dificultad()
 
 void juego2::Paredes()
 {
-    QList<pared*>paredaux = mund2->mundo2();
+   // QList<pared*>paredaux = mund2->mundo2();
     qDebug()<<"Entra a paredes";
     for(int i = 0 ; i <paredaux.size(); i++){
-        if(paredaux.at(i)->collidesWithItem(personaje)){
+        if(personaje->collidesWithItem(paredaux.at(i))){
                 if(take == true){
                     take = false;
                     monedas = new moneda();

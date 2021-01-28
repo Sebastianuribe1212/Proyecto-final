@@ -77,7 +77,7 @@ void launcher::Actualizacion4()
 {
     if(play3->getSalir() == true){
           this->setMundo("1");
-          play2->setSalir(false);
+          play3->setSalir(false);
           //connect(time,SIGNAL(timeout()), this,SLOT(Actualizacion1()));
           delete play3;
           QMessageBox::information(this,tr("GANASTEEEE"),tr("ACABASTE TODAS TUS MISIONES!!!"));
