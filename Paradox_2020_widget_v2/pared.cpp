@@ -1,4 +1,4 @@
-
+//crea paredes, tiene  funciones por cada mapa que devuelve la posición y el tamaño de ellas.
 #include "pared.h"
 
 
@@ -39,15 +39,17 @@ QList<pared *> pared::mundo1()
     pared * muro7 = new pared(500,100,-150,-350);
     paredes1.push_back(muro7);
 
-    pared * muro7_1 = new pared(5,100,-300,-250);
+    pared * muro7_1 = new pared(5,100,-295,-250);
     paredes1.push_back(muro7_1);
 
     pared * muro8 = new pared(150,100,-500,-150);
     paredes1.push_back(muro8);
-    //pared * muro9 = new pared(50,100,-600,-350);
-    //paredes1.push_back(muro9);
+
     pared * muro9_1 = new pared(5,100,-500,-250);
     paredes1.push_back(muro9_1);
+
+    pared * muroabajo  = new pared(800,50,0,-600);
+    paredes1.push_back(muroabajo);
 
 
 
@@ -77,8 +79,14 @@ QList<pared *> pared::mundo2()
 QList<pared *> pared::mundo3()
 {
     QList<pared*>paredes1;
-    pared * muro1  = new pared(800,50,0,0);
+    pared * muro1  = new pared(50,800,-800,0);
     paredes1.push_back(muro1);
+    pared * muro2  = new pared(50,800,75,0);
+    paredes1.push_back(muro2);
+    pared * muro3  = new pared(800,50,0,75);
+    paredes1.push_back(muro3);
+    pared * muro4  = new pared(800,50,0,-600);
+    paredes1.push_back(muro4);
 
     return paredes1;
 }

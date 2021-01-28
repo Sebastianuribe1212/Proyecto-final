@@ -11,12 +11,14 @@
 #include "pared.h"
 #include "cuerpo.h"
 #include "moneda.h"
+#include "enemy2.h"
 
 class juego2: public QGraphicsView
 {
     Q_OBJECT
 private:
     bool salir = false;
+    int dificultad = 2;
 public:
     juego2(QWidget * parent = 0);
 
@@ -25,19 +27,27 @@ public:
     cuerpo *  personaje = new cuerpo();
     QTimer *time ;
 
-    pared * mund2;
+    QTimer *abeja ;
 
+    pared * mund2 ;
+
+    enemy2 * enemigo1 = new enemy2();
     moneda * monedas;
     pared * portal1 ;
     bool take = false;
-    bool finish = false;
 
     QList<pared*>paredaux = mund2->mundo2();
     bool getSalir() const;
     void setSalir(bool value);
 
+    int getDificultad() const;
+    void setDificultad(int value);
+
 public slots:
     void Actualizacion();
     void portal();
+    void enemy1();
+    void Dificultad();
+    void Paredes();
 };
 #endif // JUEGO2_H
